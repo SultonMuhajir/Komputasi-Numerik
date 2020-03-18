@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Sulton Muhajir">
+  <link rel="canonical" href="https://sultonmuhajir.github.io/gaus/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Eliminasi Gauss - (180411100048) Sulton Muhajir</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Eliminasi Gauss";
+    var mkdocs_page_input_path = "gaus.md";
+    var mkdocs_page_url = "/gaus/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> (180411100048) Sulton Muhajir</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../error/">Error di Komputasi Numerik</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../root/">Numerical Solution</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Eliminasi Gauss</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">(180411100048) Sulton Muhajir</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Eliminasi Gauss</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h3 id="metode-eliminasi-gauss"><strong>Metode Eliminasi Gauss</strong></h3>
+<blockquote>
+<p>Eliminasi Gauss ialah sebuah cara mengoperasikan nilai-nilai yang berada di dalam matriks sehingga dapat menjadi matriks yang lebih sederhana. Caranya ialah melakukan operasi baris sehingga matriks tersebut menjadi matriks yang eselon-baris. Ini dapat digunakan sebagai salah satu metode penyelesaian persamaan linear dengan menggunakan matriks Caranya dengan mengubah persamaan linear tersebut ke dalam matriks teraugmentasi dan mengoperasikannya. Setelah menjadi matriks Eselon-baris, lakukan substitusi balik untuk mendapatkan nilai dari variabel-variabel tersebut.</p>
+<p>Mencari solusi persamaan linear dengan membuat matrix triangular atas terdiri dari dua tahap :</p>
+<ol>
+<li>Forward Elimination (eliminasi maju) - Tujuan Forward Elimination adalah untuk membentuk matriks koefisien menjadi Upper Triangular Matrix.</li>
+<li>Backward substitution (substitusi mundur) - Proses penyelesaian sistem persamaan linear yang telah diubah menjadi bentuk eselon baris atau bentuk eselon baris tereduksi. Persamaan terakhir diselesaikan pertama, lalu selanjutnya ke terakhir.</li>
+</ol>
+</blockquote>
+<h3 id="eliminasi-gauss-jordan"><strong>Eliminasi Gauss Jordan</strong></h3>
+<blockquote>
+<p>Metode Eliminasi Gauss Jordan merupakan pengembangan metode eliminasi gauss, hanya saja augmented matrik , pada sebelah kiri dirubah menjadi matrik diagonal.</p>
+</blockquote>
+<p><img alt="img" src="https://rusnia808.github.io/hellow/gaus5.jpg" /></p>
+<blockquote>
+<p>Algoritma :</p>
+<ol>
+<li>
+<p>masukkan matrik A, dan vektor B beserta ukurannya n</p>
+</li>
+<li>
+<p>buat augmented matrik [A|B] namakan dengan A</p>
+</li>
+<li>
+<p>Untuk baris ke i dimana i=1 s/d n</p>
+</li>
+</ol>
+<p>a. perhatikan nilai a(i,i) sama dengan 0</p>
+<ul>
+<li>
+<p>jika iya maka baris ke i dan baris i+k&lt;=n, dimana a(i+k,i) tidak sama dengan nol, bila tidak ada berarti perhitungan tidak bisa dilanjutkan dan proses dihentikan dengan tanpa penyelesaian.</p>
+</li>
+<li>
+<p>jika tidak maka dilanjutkan</p>
+</li>
+</ul>
+<p>b. Jadikan nilai diagonalnya menjadi satu,dengan cara untuk setiap kolam k dimana k=1 s/d n+1, hitung $$ a(i,k) = a(i,k) / a(i,j) $$.</p>
+</blockquote>
+<p><strong>Contoh Program</strong></p>
+<p>Persamaan:</p>
+<p>|     2 5 3 = 1    |</p>
+<p>|     3 4 2 = -3   |</p>
+<p>|     1 3 1 = 2    |</p>
+<pre><code class="python">import numpy as np
+
+#Definisi Matrix
+m=int(input(&quot;Masukkan Panjang Matrix: &quot;))
+a=[]
+b=[]
+for k in range(m):
+    mat1=[]
+    for i in range(m):
+        l=float(input(&quot;Masukkan a&quot;+str(k+1)+&quot;,&quot;+str(i+1)+&quot;: &quot;))
+        mat1.append(l)
+    h=float(input(&quot;Masukkan Hasil: &quot;))
+    print()
+    b.append(h)
+    a.append(mat1)
+
+Matrix=np.array(a,float)
+Hasil=np.array(b,float)
+
+n = len(a)                          
+x = [0, 0, 0]
+
+
+#Eliminasi Gauss
+for k in range(0,n-1):
+    for i in range(k+1,n):
+        if Matrix[i,k]!=0 :
+            lam=Matrix[i,k]/Matrix[k,k]
+            Matrix[i,k:n]=Matrix[i,k:n]-(Matrix[k,k:n]*lam)
+            Hasil[i]=Hasil[i]-(Hasil[k]*lam)
+
+print(&quot;Matrix A : &quot;,'\n',Matrix)
+print()
+
+#Subtitution
+x=np.zeros(n,float)
+for m in range(n-1,-1,-1):
+    x[m]=(Hasil[m]-np.dot(Matrix[m, m+1:n], x[m+1:n]))/Matrix[m,m]
+    print('Nilai x',m+1, '=',x[m])
+
+</code></pre>
+
+<p>Output</p>
+<pre><code class="python">Masukkan Panjang Matrix: 3
+Masukkan a1,1: 2
+Masukkan a1,2: 5
+Masukkan a1,3: 3
+Masukkan Hasil: 1
+
+Masukkan a2,1: 3
+Masukkan a2,2: 4
+Masukkan a2,3: 2
+Masukkan Hasil: -3
+
+Masukkan a3,1: 1
+Masukkan a3,2: 3
+Masukkan a3,3: 1
+Masukkan Hasil: 2
+
+Matrix A :  
+ [[ 2.          5.          3.        ]
+ [ 0.         -3.5        -2.5       ]
+ [ 0.          0.         -0.85714286]]
+
+Nilai x 3 = -1.0000000000000002
+Nilai x 2 = 2.0
+Nilai x 1 = -2.9999999999999996
+</code></pre>
+
+<p>Diperoleh Hasil</p>
+<p>x = -3</p>
+<p>y = 2</p>
+<p>z = -1</p>
+<h3 id="eliminasi-gauss-jacobi"><strong>Eliminasi Gauss Jacobi</strong></h3>
+<blockquote>
+<p>Metode Jacobi, adalah metode tak langsung atau metode iteratif yang melakukan perbaharuan nilai x yang diperoleh tiap iterasi (mirip metode substitusi berurutan). Metode ini hampir sama dengan metode Gauss Seidel, namun tidak melibatkan perhitungan implisit. </p>
+<p>Metode ini merupakan suatu teknik penyelesaian SPL berukuran n x n, AX = b, secara iteratif. Proses penyelesaian dimulai dengan suatu hampiran awal terhadap penyelesaian, X0, kemudian membentuk suatu serangkaian vector X1, X2, … yang konvergen ke X.</p>
+<p>Metode Iterasi Jacobi ini digunakan untuk menyelesaikan persamaan Linier berukuran besar dan proporsi koefisien nolnya besar.</p>
+</blockquote>
+<p><img alt="img" src="https://rusnia808.github.io/hellow/gaus7.png" /></p>
+<p><strong>Contoh Program</strong></p>
+<p>Persamaan</p>
+<p>|     3 1 -1 = 5     |</p>
+<p>|     4 7 -3 = 20   |</p>
+<p>|     2 -2 5 =10    |</p>
+<pre><code class="python">from pprint import pprint
+from numpy import array, zeros, diag, diagflat, dot
+import numpy as np
+
+def jacobi(A,b,N=25,x=None):
+    if x is None:
+        x = zeros(len(A[0]))
+
+    D = diag(A)
+    R = A - diagflat(D)
+
+    for i in range(N):
+        x = (b - dot(R,x)) / D
+    return x
+
+m=int(input(&quot;Masukkan Panjang Matrix: &quot;))
+a=[]
+b=[]
+for k in range(m):
+    mat1=[]
+    for i in range(m):
+        l=float(input(&quot;Masukkan a&quot;+str(k+1)+&quot;,&quot;+str(i+1)+&quot;: &quot;))
+        mat1.append(l)
+    h=float(input(&quot;Masukkan Hasil: &quot;))
+    print()
+    b.append(h)
+    a.append(mat1)
+
+Matrix = array(a,float)
+Hasil = array(b,float)
+
+
+
+x=len(a)
+guess = np.zeros(x,float)
+
+sol = jacobi(Matrix,Hasil,N=25,x=guess)
+
+print(&quot;Matrix:&quot;)
+pprint(Matrix)
+
+print(&quot;Hasil:&quot;)
+pprint(Hasil)
+
+print(&quot;x:&quot;)
+pprint(sol)
+
+</code></pre>
+
+<p>Output</p>
+<pre><code class="python">Masukkan Panjang Matrix: 3
+Masukkan a1,1: 3
+Masukkan a1,2: 1
+Masukkan a1,3: -1
+Masukkan Hasil: 5
+
+Masukkan a2,1: 4
+Masukkan a2,2: 7
+Masukkan a2,3: -3
+Masukkan Hasil: 20
+
+Masukkan a3,1: 2
+Masukkan a3,2: -2
+Masukkan a3,3: 5
+Masukkan Hasil: 10
+
+Matrix:
+array([[ 3.,  1., -1.],
+       [ 4.,  7., -3.],
+       [ 2., -2.,  5.]])
+Hasil:
+array([ 5., 20., 10.])
+x:
+array([1.50602413, 3.13253016, 2.6506024 ])
+</code></pre>
+
+<h3 id="eliminasi-gauss-seindel"><strong>Eliminasi Gauss Seindel</strong></h3>
+<blockquote>
+<p>Metode iterasi Gauss-Seidel adalah metode yang menggunakan proses iterasi hingga diperoleh nilai-nilai yang berubah-ubah dan akhirnya relatif konstan. Metode iterasi Gauss-Seidel dikembangkan dari gagasan metode iterasi pada solusi persamaan tak linier. Gauss ini mempunyai kelebihan dan kekurangan.</p>
+<p>Kelebihannya yaitu Metode eliminasi gauss-seidel digunakan untuk menyelesaikan SPL yang berukuran kecil karena metode ini lebih efisien. Dengan metode iterasi Gauss-Seidel toleransi pembulatan dapat diperkecil karena iterasi dapat diteruskan sampai seteliti mungkin sesuai dengan batas toleransi yang diinginkan.</p>
+<p>Kekurangannya atau Kelemahan dari metode ini adalah masalah pivot (titik tengah) yang harus benar–benar diperhatikan, karena penyusunan yang salah akan menyebabkan iterasi menjadi divergen dan tidak diperoleh hasil yang benar.</p>
+</blockquote>
+<p><img alt="img" src="https://rusnia808.github.io/hellow/gaus8.png" /></p>
+<p><strong>Contoh Program</strong></p>
+<p>Persamaan</p>
+<p>|     4 -1 1 = 7      |</p>
+<p>|     4 -8 1 = -21   |</p>
+<p>|     -2 1 5 = 15    |</p>
+<pre><code class="python">from pprint import pprint
+import numpy as np
+
+def seidel(a, x ,b): 
+    #Mencari Panjang Matrix  
+    n = len(a)               
+    for j in range(0, n):        
+        d = b[j]                 
+        #Menghitung xi, yi, zi 
+        for i in range(0, n):    
+            if(j != i): 
+                d-=a[j][i] * x[i]        
+        x[j] = d / a[j][j] #Solusi   
+    return x     
+
+m=int(input(&quot;Masukkan Panjang Matrix: &quot;))
+a=[]
+b=[]
+for k in range(m):
+    mat1=[]
+    for i in range(m):
+        l=float(input(&quot;Masukkan a&quot;+str(k+1)+&quot;,&quot;+str(i+1)+&quot;: &quot;))
+        mat1.append(l)
+    h=float(input(&quot;Masukkan Hasil: &quot;))
+    print()
+    b.append(h)
+    a.append(mat1)
+
+Matrix=np.array(a,float)
+Hasil=np.array(b,float)
+n = len(a)                          
+x = [0, 0, 0]                        
+
+print(&quot;Matrix:&quot;)
+pprint(Matrix)
+
+print(&quot;Hasil:&quot;)
+pprint(Hasil)
+
+print()
+
+for i in range(0, 100):          
+    x = seidel(a, x, b)
+print(&quot;Jawaban :&quot;,x)
+
+</code></pre>
+
+<p>Output</p>
+<pre><code class="python">Masukkan Panjang Matrix: 3
+Masukkan a1,1: 4
+Masukkan a1,2: -1
+Masukkan a1,3: 1
+Masukkan Hasil: 7
+
+Masukkan a2,1: 4
+Masukkan a2,2: -8
+Masukkan a2,3: 1
+Masukkan Hasil: -21
+
+Masukkan a3,1: -2
+Masukkan a3,2: 1
+Masukkan a3,3: 5
+Masukkan Hasil: 15
+
+Matrix:
+array([[ 4., -1.,  1.],
+       [ 4., -8.,  1.],
+       [-2.,  1.,  5.]])
+Hasil:
+array([  7., -21.,  15.])
+
+Jawaban : [2.0, 4.0, 3.0]
+</code></pre>
+
+<p>Iterasi yang digunakan sebanyak 100 iterasi, sehingga dapat menghasilkan:</p>
+<p>x = 2</p>
+<p>y = 4</p>
+<p>z = 3.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../root/" class="btn btn-neutral" title="Numerical Solution"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2020 Sulton Muhajir</p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../root/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
