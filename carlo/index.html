@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="Sulton Muhajir">
-  <link rel="canonical" href="https://sultonmuhajir.github.io/euler/">
+  <link rel="canonical" href="https://sultonmuhajir.github.io/carlo/">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Euler Method - (180411100048) Sulton Muhajir</title>
+  <title>Monte Carlo Method - (180411100048) Sulton Muhajir</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Euler Method";
-    var mkdocs_page_input_path = "euler.md";
-    var mkdocs_page_url = "/euler/";
+    var mkdocs_page_name = "Monte Carlo Method";
+    var mkdocs_page_input_path = "carlo.md";
+    var mkdocs_page_url = "/carlo/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -71,14 +71,14 @@
                     <li class="toctree-l1"><a class="reference internal" href="../richardson/">Richardson Extrapolation</a>
                     </li>
                 </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Euler Method</a>
-    <ul class="current">
-    </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../euler/">Euler Method</a>
                     </li>
                 </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../carlo/">Monte Carlo Method</a>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Monte Carlo Method</a>
+    <ul class="current">
+    </ul>
                     </li>
                 </ul>
       </div>
@@ -102,7 +102,7 @@
     
       
     
-    <li>Euler Method</li>
+    <li>Monte Carlo Method</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -113,59 +113,99 @@
           <div role="main">
             <div class="section">
               
-                <h3 id="metode-euler"><strong>Metode Euler</strong></h3>
+                <h3 id="metode-monte-carlo"><strong>Metode Monte Carlo</strong></h3>
 <blockquote>
-<p>Dalam matematika dan ilmu komputasi, metode euler juga disebut metode forward euler adalah prosedur numerik orde pertama untuk menyelesaikan persamaan differensial biasa dengan nilai awal yang diberikan.</p>
-<p>Metode Euler adalah salah satu metode satu langkah paling sederhana. Dibandingkan dengan beberapa metode lain, metode ini paling tidak teliti. Namun, metode ini perlu dipelajari mengingat kesederhanaan dan pemahaman yang mudah sehingga membuatnya lebih mudah untuk mempelajari metode lain secara lebih menyeluruh.</p>
-<p>Metode Euler merupakan metode paling sederhana yang diturunkan dari deret Taylor. Penyelesaian initial value problems menggunakan metode Euler dilakukan melalui persamaan</p>
-<p><em>yi + 1 = yi + f(xi,yi) h</em></p>
-<p>dimana i merupakan tahap iterasi.</p>
+<p>Metode Monte Carlo adalah algoritma komputasi yang mengandalkan pengambilan sampel acak berulang untuk mendapatkan hasil numerik. Penggunaan metode ini adalah untuk mengevaluasi integral definit, terutama integral multidimensi dengan syarat dan batasan yang rumit.</p>
+<p>Metode ini terbukti efisien dalam memecahkan persamaan diferensial integral medan radians, sehingga metode ini digunakan dalam perhitungan iluminasi global yang menghasilkan gambar-gambar fotorealistik model tiga dimensi, dimana diterapkan dalam video games, arsitektur, perancangan, film yang dihasilkan oleh komputer, efek-efek khusus dalam film, bisnis, ekonomi, dan bidang lainnya. Karena algoritma ini memerlukan pengulangan (repetisi) dan perhitungan yang amat kompleks, metode Monte Carlo pada umumnya dilakukan menggunakan komputer, dan memakai berbagai teknik simulasi komputer.</p>
 </blockquote>
-<p><strong>Algoritma Metode Euler</strong></p>
+<p><strong>Algoritma Metode Monte Carlo</strong></p>
 <blockquote>
 <ol>
-<li>Tentukan titik awal integrasi x0 dan y0</li>
-<li>Tentukan jumlah iterasi n dan step size h yang digunakan.</li>
-<li>Lakukan integrasi menggunakan persamaan diatas.</li>
+<li>Mendefinisikan distribusi probabilitas dati datamasa lalu atau dari distribusi teoritis.</li>
+<li>Mengkonversikan distribusi kedalam frekuensikumulatif.</li>
+<li>Melakukan simulasi dengan bilangan acak.</li>
+<li>Menganalisa keluaran simulasi.</li>
 </ol>
 </blockquote>
 <p><strong>Contoh Soal</strong></p>
 <blockquote>
-<p>Membuat program untuk menyelesaikan persamaan differensial berikut menggunakan Metode Euler</p>
-<p>dy/dx = 1 + x^2,  y(1) = -4</p>
-<p>Untuk menentukan y(1.01), y(1.02) dan y(1.03)</p>
+<ol>
+<li>Buatlah program untuk memverifikasi secara numerik bahwa π =2 0 (4−x2)1/2 dx. Gunakan metode monte carlo dan 2500 angka acak.</li>
+<li>Gunakan metode monte carlo untuk memperkirakan integral 1 −11 −11 −1
+   (x2 + y2 +z2) dxdydz</li>
+</ol>
 </blockquote>
-<p><strong>Listing Program</strong></p>
-<pre><code class="python">print(&quot;f(x,y) = 1+x^2&quot;)
-print(&quot;(yi+1) = y1 + h f(xi+yi)&quot;)
+<p><strong>Listing Program No.1</strong></p>
+<pre><code class="python">from scipy import random
+import numpy as np
+import matplotlib.pyplot as plt
 
-xi = float(input(&quot;Masukkan xi = &quot;))
-yi = float(input(&quot;Masukkan yi = &quot;))
+b1 = 0
+b2 = 2
+Rn = 2500
 
-h = 1.01-xi #Mengurangi 1.01 dengan x - awal dengan 1 menghasilkan 0.01
-n = 4 #Jumlah iterasi yg dipakai 4 karena ada y(1),y(1.01),y(1.02),y(1.03)
+def f(x):
+    return (4-x**2)**0.5
 
-def f(x,y):
-    return 1+x**2
-def metode_euler(xi,yi,h,n):
-    nilai = yi
-    for i in range(n):
-        print(&quot;Nilai dari x&quot;+str(i)+&quot; = &quot;,str(xi) +&quot; dan y&quot;+str(i)+&quot; = &quot;, str(nilai))
-        nilai = yi + h*f(xi,yi)
-        xi=xi+h
-        yi=nilai
-metode_euler(xi,yi,h,n)
+area = []
+for i in range(Rn):
+    xrand = np.zeros(Rn)
+    for i in range(len(xrand)):
+        xrand[i] = random.uniform(b1,b2)
+        integral = 0.0
+    for i in range(Rn):
+        integral+=f(xrand[i])
+    hasil = (b2-b1)/float(Rn)*integral
+    area.append(hasil)
+
+plt.title(&quot;Nilai phi&quot;)
+plt.hist(area,bins = 30, ec = 'blue')
+plt.xlabel(&quot;Area&quot;)
+plt.show()
 </code></pre>
 
-<p><strong>Hasil Running</strong></p>
-<pre><code class="python">f(x,y) = 1+x^2
-(yi+1) = y1 + h f(xi+yi)
-Masukkan xi = 1
-Masukkan yi = -4
-Nilai dari x0 =  1.0 dan y0 =  -4.0
-Nilai dari x1 =  1.01 dan y1 =  -3.98
-Nilai dari x2 =  1.02 dan y2 =  -3.959799
-Nilai dari x3 =  1.03 dan y3 =  -3.9393949999999998
+<p><strong>Hasil Running No.1</strong></p>
+<blockquote>
+<p>Menampilkan gambar hasil komputasi</p>
+</blockquote>
+<p><strong>Listing Program No.2</strong></p>
+<pre><code class="python">from scipy import random
+import numpy as np
+
+b1 = -1
+b2 = 1
+N = 150
+n = 3
+
+xrand=np.zeros(N)
+yrand=np.zeros(N)
+zrand=np.zeros(N)
+integral=0.0
+
+for i in range(n+1):
+    for i in range(len(xrand)):
+        xrand[i]=random.uniform(b1,b2)
+    for i in range(len(yrand)):
+        yrand[i]=random.uniform(b1,b2)
+    for i in range(len(zrand)):
+        zrand[i]=random.uniform(b1,b2)
+    def f(x,y,z):
+        return (x**2)+(y**2)+(z**2)
+    for i in range(N):
+        integral+=f(xrand[i],yrand[i],zrand[i])
+
+print(&quot;Fungsi f(x,y,z) = (x**2)+(y**2)+(z**2)&quot;)
+print(&quot;Dengan b1 = -1, b2 = 1, xyz (n) = 3&quot;)
+print(&quot;Rumus Metode dengan (b2-b1)*1/N*f(x,y,z)&quot;)
+hasil=(b2-b1)/float(N)*integral
+print(&quot;Hasil : &quot;,hasil)
+</code></pre>
+
+<p><strong>Hasil Running No.2</strong></p>
+<pre><code class="python">Fungsi f(x,y,z) = (x**2)+(y**2)+(z**2)
+Dengan b1 = -1, b2 = 1, xyz (n) = 3
+Rumus Metode dengan (b2-b1)*1/N*f(x,y,z)
+Hasil :  7.913876364232494
 </code></pre>
               
             </div>
@@ -174,10 +214,8 @@ Nilai dari x3 =  1.03 dan y3 =  -3.9393949999999998
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../carlo/" class="btn btn-neutral float-right" title="Monte Carlo Method">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../richardson/" class="btn btn-neutral" title="Richardson Extrapolation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../euler/" class="btn btn-neutral" title="Euler Method"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -205,10 +243,8 @@ Nilai dari x3 =  1.03 dan y3 =  -3.9393949999999998
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../richardson/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../euler/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../carlo/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

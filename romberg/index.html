@@ -77,6 +77,10 @@
                     <li class="toctree-l1"><a class="reference internal" href="../euler/">Euler Method</a>
                     </li>
                 </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../carlo/">Monte Carlo Method</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
@@ -113,7 +117,7 @@
 <blockquote>
 <p>Metode Romberg adalah metode perhitungan yang didasarkan trapezional rule dan error calcultion sehingga dapat menghasilan nilai integral dengan tingkat presisi yang tinggi. Metode integrasi Romberg didasarkan pada perluasan ekstrapolasi Richardson untuk memperoleh nilai integrasi yang semakin baik.</p>
 <p>Metode ini sering digunakan untuk memperbaiki hasil aproksimasi oleh metode selisih terhingga. Metode ini dipakai untuk evaluasi numerik dari integral tentu. Untuk dua interval bagian yang berbeda yang panjangnya h1 dan h2 akan diperoleh aproksimasi nilai-nilai I1 dan I2, kemudian diperoleh kekeliruan E1 dan E2.</p>
-<p>Algoritma :</p>
+<p><strong>Algoritma :</strong></p>
 <ol>
 <li>Mendefinisikan fungsi integral f(x)</li>
 <li>Menentukan batas-batas integral dengan nilai konstanta</li>
@@ -170,7 +174,7 @@ if __name__ == '__main__':
 
 </code></pre>
 
-<p>Output</p>
+<p><strong>Hasil Running</strong></p>
 <pre><code class="python">[0.78539816]
 [0.94805945 1.00227988]
 [0.9871158  1.00013458 0.99999157]
@@ -178,6 +182,7 @@ if __name__ == '__main__':
 Solusi yang didapatkan = 1.0000000081440203
 </code></pre>
 
+<blockquote>
 <p>Keterangan</p>
 <ul>
 <li>f : fungsi untuk diintegrasikan.</li>
@@ -186,6 +191,7 @@ Solusi yang didapatkan = 1.0000000081440203
 <li>n : jumlah panel untuk dibuat antara a dan b.</li>
 <li>p : jumlah baris dalam tabel Romberg.</li>
 </ul>
+</blockquote>
               
             </div>
           </div>

@@ -77,6 +77,10 @@
                     <li class="toctree-l1"><a class="reference internal" href="../euler/">Euler Method</a>
                     </li>
                 </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../carlo/">Monte Carlo Method</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
@@ -135,10 +139,10 @@
 </li>
 </ul>
 </blockquote>
-<h3 id="bisection"><strong>Bisection</strong></h3>
+<h3 id="1-bisection"><strong>1. Bisection</strong></h3>
 <blockquote>
 <p>Metode biseksi ini membagi range menjadi 2 bagian, dari dua bagian ini dipilih bagian mana yang mengandung akar sedangkan bagian yang tidak mengandung akar akan dibuang. Hal ini dilakukan berulang-ulang hingga diperoleh suatu akar persamaan.</p>
-<p>Algoritma:</p>
+<p><strong>Algoritma:</strong></p>
 <ol>
 <li>Definisikan fungsi f(x) yang akan dicari akarnya</li>
 <li>Tentukan nilai a dan b</li>
@@ -151,7 +155,7 @@
 <li>Jika |b-a|<e atau iterasi > iterasi maks maka proses dihentikan dan didapatkan akar x, bila tidak, ulangi langkah 6</li>
 </ol>
 </blockquote>
-<p>Contoh Program</p>
+<h6 id="contoh-program"><strong>Contoh Program</strong></h6>
 <pre><code class="python">def bisection(f,a,b,N):
 
     if f(a)*f(b) &gt;= 0:
@@ -180,11 +184,11 @@ approx_phi = bisection(f,1,2.3,25)
 print(approx_phi)
 </code></pre>
 
-<p>Output</p>
+<h6 id="hasil-running"><strong>Hasil Running</strong></h6>
 <pre><code class="python">1.9999999985098835
 </code></pre>
 
-<h3 id="regula-falsi"><strong>Regula Falsi</strong></h3>
+<h3 id="2-regula-falsi"><strong>2. Regula Falsi</strong></h3>
 <blockquote>
 <ul>
 <li>Metode pencarian akar persamaan dengan memanfaatkan kemiringan dan selisih tinggi dari dua titik batas range.</li>
@@ -192,7 +196,7 @@ print(approx_phi)
 <li>Dikenal dengan metode False Position</li>
 <li>Metode ini juga merupakan penyempurna dari metode bisection</li>
 </ul>
-<p>Algoritma:</p>
+<p><strong>Algoritma:</strong></p>
 <ol>
 <li>Definisikan fungsi f(x)</li>
 <li>Tentukan batas bawah (a) dan batas atas (b)</li>
@@ -206,7 +210,7 @@ print(approx_phi)
 <li>Akar persamaanya = c</li>
 </ol>
 </blockquote>
-<p>Contoh Program</p>
+<h6 id="contoh-program_1"><strong>Contoh Program</strong></h6>
 <pre><code class="python">error = 0.01
 a = 0
 b = 2.1
@@ -239,11 +243,11 @@ def regulasi_falsi(a,b):
 regulasi_falsi(a,b)
 </code></pre>
 
-<p>Output</p>
+<h6 id="hasil-running_1"><strong>Hasil Running</strong></h6>
 <pre><code>x = 2.000000000174259
 </code></pre>
 
-<h3 id="newton-raphson"><strong>Newton Raphson</strong></h3>
+<h3 id="3-newton-raphson"><strong>3. Newton Raphson</strong></h3>
 <blockquote>
 <p>Metode Newton-Raphson adalah metode pencarian akar suatu fungsi f(x) dengan pendekatan satu titik, dimana fungsi f(x) mempunyai turunan. Metode ini dianggap lebih mudah dari Metode Bagi-Dua (Bisection Method) karena metode ini menggunakan pendekatan satu titik sebagai titik awal.</p>
 <p>Prosedur:</p>
@@ -253,7 +257,7 @@ regulasi_falsi(a,b)
 <li>Ulangi langkah sebelumnya tapi sekarang x1 dianggap sebagai titik awalnya. Dari mengulang langkah-langkah sebelumnya akan mendapatkan x1,x2,x3,...,,xn dengan xn yang diperoleh adalah bilangan riil yang merupakan akar atau mendekati akar yang sebenarnya.</li>
 </ol>
 </blockquote>
-<p>Contoh Program</p>
+<p><strong>Contoh Program</strong></p>
 <pre><code class="python">def newton(f,Df,x0,epsilon,max_iter):
 
     xn = x0
@@ -276,12 +280,12 @@ approx = newton(p,Dp,1,1e-3,10)
 print(approx)
 </code></pre>
 
-<p>Output</p>
+<h6 id="hasil-running_2">Hasil Running</h6>
 <pre><code class="python">Found solution after 4 iterations.
 1.9999847409781035
 </code></pre>
 
-<h3 id="secant"><strong>Secant</strong></h3>
+<h3 id="4-secant"><strong>4. Secant</strong></h3>
 <blockquote>
 <ul>
 <li>Metode Newton Raphson memerlukan perhitungan turunan fungsi f’(x).</li>
@@ -289,7 +293,7 @@ print(approx)
 <li>Turunan fungsi dapat dihilangkan dengan cara menggantinya dengan bentuk lain yang ekivalen</li>
 <li>Modifikasi metode Newton Raphson dinamakan metode Secant.</li>
 </ul>
-<p>Algoritma :</p>
+<p><strong>Algoritma :</strong></p>
 <ol>
 <li>Definisikan f(x)</li>
 <li>Definisikan toleransi error e dan iterasi maksimum (n)</li>
@@ -301,7 +305,7 @@ print(approx)
 <li>Akar persamaan adalah nilai x yang terakhir</li>
 </ol>
 </blockquote>
-<p>Contoh Program</p>
+<p><strong>Contoh Program</strong></p>
 <pre><code class="python">def secant(f,a,b,N):
 
     if f(a)*f(b) &gt;= 0:
@@ -331,7 +335,7 @@ approx = secant(p,1,2.4,20)
 print(approx)
 </code></pre>
 
-<p>Output</p>
+<p><strong>Hasil Running</strong></p>
 <pre><code class="python">2.0000003178913373
 </code></pre>
               
