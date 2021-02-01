@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <meta name="author" content="Sulton Muhajir">
-  <link rel="canonical" href="https://sultonmuhajir.github.io/error/">
+  
+  
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Error in Numerical Computation - (180411100048) Sulton Muhajir</title>
+  <title>Error in Numerical Computation - Komputasi Numerik</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -20,7 +20,7 @@
     // Current page data
     var mkdocs_page_name = "Error in Numerical Computation";
     var mkdocs_page_input_path = "error.md";
-    var mkdocs_page_url = "/error/";
+    var mkdocs_page_url = null;
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -38,7 +38,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> (180411100048) Sulton Muhajir</a>
+        <a href=".." class="icon icon-home"> Komputasi Numerik</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -54,6 +54,18 @@
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Error in Numerical Computation</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#types-of-errors">Types of Errors</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deret-maclaurin">Deret Maclaurin</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#contoh-soal">Contoh Soal</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#listing-program">Listing Program</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hasil-running">Hasil Running</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                     </li>
                 </ul>
@@ -90,7 +102,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">(180411100048) Sulton Muhajir</a>
+        <a href="..">Komputasi Numerik</a>
       </nav>
 
       
@@ -113,28 +125,22 @@
           <div role="main">
             <div class="section">
               
-                <h3 id="pengertian-error-galat"><strong>Pengertian Error / Galat</strong></h3>
-<blockquote>
+                <h1 id="pengertian-error-galat">Pengertian Error / Galat</h1>
 <p>Error/Galat merupakan perbedaan antara hasil penyelesaian suatu model matematik secara numeric dengan penyelesaian secara analitis.</p>
 <p>Kesalahan yang terjadi sangatlah penting, karena kesalahan dalam pemakaian algoritma pendekatan akan menyebabkan nilai kesalahan yang besar. Sehingga pendekatan metode numerik selalu membahas tingkat kesalahan dan tingkat kecepatan proses yang akan terjadi.</p>
 <p>Masalah-masalah matematika yang sering kita selesaikan biasanya menggunakan metode analitik atau metode sejati, yaitu suatu metode yang memberikan solusi yang sesungguhnya, karena memiliki galat (<em>error</em>) yang bernilai nol. Tetapi penyelesaian dengan menggunakan metode analitik hanya terbatas , tidak selalu bisa diterapkan , maka solusinya masih dapat dicari yaitu dengan menggunakan metode numerik. Pada metode numerik solusinya merupakan hampiran (pendekatan) terhadap solusi sejati.</p>
-</blockquote>
-<h3 id="round-off-error-truncation-error-dan-inherent-errors"><strong>Round off Error, Truncation Error, dan Inherent errors</strong></h3>
-<blockquote>
+<p><br/></p>
+<h3 id="types-of-errors">Types of Errors</h3>
 <p>Round off Error, perhitungan dengan metode numerik hampir selalu menggunakan bilangan riil. Masalah timbul apabila komputasi numerik dikerjakan oleh mesin (dalam hal ini dengan menggunakan komputer) karena semua bilangan riil tidak dapat disajikan secara tepat di dalam komputer.</p>
 <p>Truncation merupakan kesalahan pemotongan terjadi ketika suatu rumus komputasi disederhanakan dengan cara membuang suku yang berderajat tinggi.</p>
 <p>Inherent errors terjadi akibat kekeliruan dalam menyalin data, salah membaca skala atau kesalahan karena kurangnya pengertian mengenai hukum-hukum fisik dari data yang diukur. Kesalahan ini sering terjadi karena faktor human error.</p>
-</blockquote>
-<h3 id="deret-maclaurin"><strong>Deret Maclaurin</strong></h3>
-<blockquote>
+<p><br/></p>
+<h3 id="deret-maclaurin">Deret Maclaurin</h3>
 <p>Suatu fungsi f(x) yang memiliki turunan <img alt="f'(x)" src="https://s0.wp.com/latex.php?latex=f%27%28x%29&amp;bg=ffffff&amp;fg=666666&amp;s=0" />, <img alt="f''(x)" src="https://s0.wp.com/latex.php?latex=f%27%27%28x%29&amp;bg=ffffff&amp;fg=666666&amp;s=0" />, <img alt="f'''(x)" src="https://s0.wp.com/latex.php?latex=f%27%27%27%28x%29&amp;bg=ffffff&amp;fg=666666&amp;s=0" />, dan seterusnya yang kontinyu dalam interval <img alt="I" src="https://s0.wp.com/latex.php?latex=I&amp;bg=ffffff&amp;fg=666666&amp;s=0" /> dengan <img alt="a, x \in I" src="https://s0.wp.com/latex.php?latex=a%2C+x+%5Cin+I&amp;bg=ffffff&amp;fg=666666&amp;s=0" /> maka untuk <img alt="x" src="https://s0.wp.com/latex.php?latex=x&amp;bg=ffffff&amp;fg=666666&amp;s=0" /> disekitar <img alt="a" src="https://s0.wp.com/latex.php?latex=a&amp;bg=ffffff&amp;fg=666666&amp;s=0" /> yaitu <img alt="|x -a| &lt; \mathbb{R}" src="https://s0.wp.com/latex.php?latex=%7Cx+-a%7C+%3C+%5Cmathbb%7BR%7D&amp;bg=ffffff&amp;fg=666666&amp;s=0" />, <img alt="f(x)" src="https://s0.wp.com/latex.php?latex=f%28x%29&amp;bg=ffffff&amp;fg=666666&amp;s=0" /> dapat diekspansi kedalam Deret TaylorDefinisi.</p>
-</blockquote>
-<h6 id="contoh-soal"><strong>Contoh Soal</strong></h6>
-<blockquote>
-<p>Buatlah program dengan menghitung e^3x untuk nilai x=4, kemudian expensikan hingga selisih yang dihasilkan kurang dari nilai error yang ditentukan yaitu e &lt; 0,001
-</p>
-</blockquote>
-<h6 id="listing-program"><strong>Listing Program</strong></h6>
+<p><br/></p>
+<h3 id="contoh-soal">Contoh Soal</h3>
+<p>Buatlah program dengan menghitung e^3x untuk nilai x=4, kemudian expensikan hingga selisih yang dihasilkan kurang dari nilai error yang ditentukan yaitu e &lt; 0,001</p>
+<h6 id="listing-program">Listing Program</h6>
 <pre><code class="python">import math
 
 x = 4
@@ -162,7 +168,7 @@ while test &gt; 0.001:
 
 </code></pre>
 
-<h6 id="hasil-running"><strong>Hasil Running</strong></h6>
+<h6 id="hasil-running">Hasil Running</h6>
 <pre><code class="python">Suku ke- 0 : 0
 Suku ke- 1 : 1.0
 Hasil Selisih : 1.0
@@ -335,7 +341,7 @@ Hasil Selisih : 0.0006179726042319089
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>Copyright &copy; 2020 Sulton Muhajir</p>
+      <p>&copy; 2020 All Rights Reserved by Sulton Muhajir</p>
     
   </div>
 

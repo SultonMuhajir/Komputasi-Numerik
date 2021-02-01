@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <meta name="author" content="Sulton Muhajir">
-  <link rel="canonical" href="https://sultonmuhajir.github.io/root/">
+  
+  
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Numerical Solution - (180411100048) Sulton Muhajir</title>
+  <title>Numerical Solution - Komputasi Numerik</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -20,7 +20,7 @@
     // Current page data
     var mkdocs_page_name = "Numerical Solution";
     var mkdocs_page_input_path = "root.md";
-    var mkdocs_page_url = "/root/";
+    var mkdocs_page_url = null;
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -38,7 +38,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> (180411100048) Sulton Muhajir</a>
+        <a href=".." class="icon icon-home"> Komputasi Numerik</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -58,6 +58,50 @@
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Numerical Solution</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#metode-tertutup">Metode Tertutup</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#metode-terbuka">Metode Terbuka</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#1-bisection">1. Bisection</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#algoritma">Algoritma:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#contoh-program">Contoh Program</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hasil-running">Hasil Running</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-regula-falsi">2. Regula Falsi</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#algoritma_1">Algoritma:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#contoh-program_1">Contoh Program</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hasil-running_1">Hasil Running</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-newton-raphson">3. Newton Raphson</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#algoritma_2">Algoritma</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#contoh-program_2">Contoh Program</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hasil-running_2">Hasil Running</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-secant">4. Secant</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#algoritma_3">Algoritma :</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#contoh-program_3">Contoh Program</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hasil-running_3">Hasil Running</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                     </li>
                 </ul>
@@ -90,7 +134,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">(180411100048) Sulton Muhajir</a>
+        <a href="..">Komputasi Numerik</a>
       </nav>
 
       
@@ -113,9 +157,8 @@
           <div role="main">
             <div class="section">
               
-                <h3 id="numerical-solution-of-algebraic-and-transcendental-equation">Numerical Solution of Algebraic and Transcendental Equation</h3>
-<blockquote>
-<p>Metode Tertutup</p>
+                <h1 id="numerical-solution-of-algebraic-and-transcendental-equation">Numerical Solution of Algebraic and Transcendental Equation</h1>
+<h6 id="metode-tertutup">Metode Tertutup</h6>
 <ul>
 <li>
 <p>Mencari akar pada range [a,b] tertentu</p>
@@ -130,19 +173,16 @@
 <p>Contohnya Metode Tabel ,Metode Biseksi,Metode Regula Falsi</p>
 </li>
 </ul>
-<p>Metode Terbuka</p>
+<h6 id="metode-terbuka">Metode Terbuka</h6>
 <ul>
 <li>Diperlukan tebakan awal</li>
 <li>xn dipakai untuk menghitung xn+1</li>
 <li>Hasil dapat konvergen atau divergen</li>
-<li>Contohnya Metode Iterasi Sederhana, Metode Newton-Raphson, Metode Secant.
-</li>
+<li>Contohnya Metode Iterasi Sederhana, Metode Newton-Raphson, Metode Secant.</li>
 </ul>
-</blockquote>
-<h3 id="1-bisection"><strong>1. Bisection</strong></h3>
-<blockquote>
+<h3 id="1-bisection">1. Bisection</h3>
 <p>Metode biseksi ini membagi range menjadi 2 bagian, dari dua bagian ini dipilih bagian mana yang mengandung akar sedangkan bagian yang tidak mengandung akar akan dibuang. Hal ini dilakukan berulang-ulang hingga diperoleh suatu akar persamaan.</p>
-<p><strong>Algoritma:</strong></p>
+<h6 id="algoritma">Algoritma:</h6>
 <ol>
 <li>Definisikan fungsi f(x) yang akan dicari akarnya</li>
 <li>Tentukan nilai a dan b</li>
@@ -154,8 +194,7 @@
 <li>Bila f(x).f(a)&lt;0 maka b = x dan f(b)=f(x), bila tidak maka a=x dan f(a)=f(x)</li>
 <li>Jika |b-a|<e atau iterasi > iterasi maks maka proses dihentikan dan didapatkan akar x, bila tidak, ulangi langkah 6</li>
 </ol>
-</blockquote>
-<h6 id="contoh-program"><strong>Contoh Program</strong></h6>
+<h6 id="contoh-program">Contoh Program</h6>
 <pre><code class="python">def bisection(f,a,b,N):
 
     if f(a)*f(b) &gt;= 0:
@@ -184,19 +223,19 @@ approx_phi = bisection(f,1,2.3,25)
 print(approx_phi)
 </code></pre>
 
-<h6 id="hasil-running"><strong>Hasil Running</strong></h6>
+<h6 id="hasil-running">Hasil Running</h6>
 <pre><code class="python">1.9999999985098835
 </code></pre>
 
-<h3 id="2-regula-falsi"><strong>2. Regula Falsi</strong></h3>
-<blockquote>
+<p><br/></p>
+<h3 id="2-regula-falsi">2. Regula Falsi</h3>
 <ul>
 <li>Metode pencarian akar persamaan dengan memanfaatkan kemiringan dan selisih tinggi dari dua titik batas range.</li>
 <li>Dua titik a dan b pada fungsi f(x) digunakan untuk mengestimasi posisi c dari akar interpolasi linier.</li>
 <li>Dikenal dengan metode False Position</li>
 <li>Metode ini juga merupakan penyempurna dari metode bisection</li>
 </ul>
-<p><strong>Algoritma:</strong></p>
+<h6 id="algoritma_1">Algoritma:</h6>
 <ol>
 <li>Definisikan fungsi f(x)</li>
 <li>Tentukan batas bawah (a) dan batas atas (b)</li>
@@ -209,8 +248,7 @@ print(approx_phi)
 <li>Jika f(c).f(a)&lt;0 maka nilai a tetap ,jika tidak maka a=c dan f(a)=f(c) ]</li>
 <li>Akar persamaanya = c</li>
 </ol>
-</blockquote>
-<h6 id="contoh-program_1"><strong>Contoh Program</strong></h6>
+<h6 id="contoh-program_1">Contoh Program</h6>
 <pre><code class="python">error = 0.01
 a = 0
 b = 2.1
@@ -243,21 +281,20 @@ def regulasi_falsi(a,b):
 regulasi_falsi(a,b)
 </code></pre>
 
-<h6 id="hasil-running_1"><strong>Hasil Running</strong></h6>
+<h6 id="hasil-running_1">Hasil Running</h6>
 <pre><code>x = 2.000000000174259
 </code></pre>
 
-<h3 id="3-newton-raphson"><strong>3. Newton Raphson</strong></h3>
-<blockquote>
+<p><br/></p>
+<h3 id="3-newton-raphson">3. Newton Raphson</h3>
 <p>Metode Newton-Raphson adalah metode pencarian akar suatu fungsi f(x) dengan pendekatan satu titik, dimana fungsi f(x) mempunyai turunan. Metode ini dianggap lebih mudah dari Metode Bagi-Dua (Bisection Method) karena metode ini menggunakan pendekatan satu titik sebagai titik awal.</p>
-<p>Prosedur:</p>
+<h6 id="algoritma_2">Algoritma</h6>
 <ol>
 <li>Menentukan x0 sebagai titik awal.</li>
 <li>Menarik garis lurus (misal garis P) yang menyinggung titik f(x0). Hal ini berakibat garis P memotong sumbu-x di titik x1. </li>
 <li>Ulangi langkah sebelumnya tapi sekarang x1 dianggap sebagai titik awalnya. Dari mengulang langkah-langkah sebelumnya akan mendapatkan x1,x2,x3,...,,xn dengan xn yang diperoleh adalah bilangan riil yang merupakan akar atau mendekati akar yang sebenarnya.</li>
 </ol>
-</blockquote>
-<p><strong>Contoh Program</strong></p>
+<h6 id="contoh-program_2">Contoh Program</h6>
 <pre><code class="python">def newton(f,Df,x0,epsilon,max_iter):
 
     xn = x0
@@ -285,15 +322,14 @@ print(approx)
 1.9999847409781035
 </code></pre>
 
-<h3 id="4-secant"><strong>4. Secant</strong></h3>
-<blockquote>
+<h3 id="4-secant">4. Secant</h3>
 <ul>
 <li>Metode Newton Raphson memerlukan perhitungan turunan fungsi f’(x).</li>
 <li>Tidak semua fungsi mudah dicari turunannya terutama fungsi yang bentuknya rumit.</li>
 <li>Turunan fungsi dapat dihilangkan dengan cara menggantinya dengan bentuk lain yang ekivalen</li>
 <li>Modifikasi metode Newton Raphson dinamakan metode Secant.</li>
 </ul>
-<p><strong>Algoritma :</strong></p>
+<h6 id="algoritma_3">Algoritma :</h6>
 <ol>
 <li>Definisikan f(x)</li>
 <li>Definisikan toleransi error e dan iterasi maksimum (n)</li>
@@ -304,8 +340,7 @@ print(approx)
 <li>hitung y_(i+1)=〖f(x〗_(i+1)) ]</li>
 <li>Akar persamaan adalah nilai x yang terakhir</li>
 </ol>
-</blockquote>
-<p><strong>Contoh Program</strong></p>
+<h6 id="contoh-program_3">Contoh Program</h6>
 <pre><code class="python">def secant(f,a,b,N):
 
     if f(a)*f(b) &gt;= 0:
@@ -335,7 +370,7 @@ approx = secant(p,1,2.4,20)
 print(approx)
 </code></pre>
 
-<p><strong>Hasil Running</strong></p>
+<h6 id="hasil-running_3">Hasil Running</h6>
 <pre><code class="python">2.0000003178913373
 </code></pre>
               
@@ -358,7 +393,7 @@ print(approx)
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>Copyright &copy; 2020 Sulton Muhajir</p>
+      <p>&copy; 2020 All Rights Reserved by Sulton Muhajir</p>
     
   </div>
 

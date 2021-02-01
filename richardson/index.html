@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <meta name="author" content="Sulton Muhajir">
-  <link rel="canonical" href="https://sultonmuhajir.github.io/richardson/">
+  
+  
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Richardson Extrapolation - (180411100048) Sulton Muhajir</title>
+  <title>Richardson Extrapolation - Komputasi Numerik</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -20,7 +20,7 @@
     // Current page data
     var mkdocs_page_name = "Richardson Extrapolation";
     var mkdocs_page_input_path = "richardson.md";
-    var mkdocs_page_url = "/richardson/";
+    var mkdocs_page_url = null;
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -38,7 +38,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> (180411100048) Sulton Muhajir</a>
+        <a href=".." class="icon icon-home"> Komputasi Numerik</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -70,6 +70,16 @@
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Richardson Extrapolation</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#teori">Teori</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#contoh-program">Contoh Program</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#listing-program">Listing Program</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hasil-running">Hasil Running</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                     </li>
                 </ul>
@@ -90,7 +100,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">(180411100048) Sulton Muhajir</a>
+        <a href="..">Komputasi Numerik</a>
       </nav>
 
       
@@ -113,15 +123,13 @@
           <div role="main">
             <div class="section">
               
-                <h3 id="richardson-extrapolation"><strong>Richardson Extrapolation</strong></h3>
-<blockquote>
+                <h1 id="richardson-extrapolation">Richardson Extrapolation</h1>
 <p>Dalam analisis numerik,ekstrapolasi Richardson adalah metode percepatan urutan, yang digunakan untuk meningkatkan laju konvergensi suatu urutan. Ekstrapolasi Richardson diterapkan pada barisan pendekatan nilai opsi untuk mempercepat laju konvergensinya.</p>
 <p>Aplikasi praktis ekstrapolasi Richardson termasuk integrasi Romberg, yang menerapkan ekstrapolasi Richardson pada aturan trapesium, dan algoritma Bulirsch-Stoer untuk menyelesaikan persamaan diferensial biasa.</p>
 <p>Metode Richardson tidak dapat menghasilkan estimasi untuk kesalahan perkiraan. Salah satu cara untuk memperkirakan kesalahan adalah dengan melakukan dua ekstrapolasi dengan NN yang sedikit berbeda dan membandingkan hasilnya.</p>
 <p>Ekstrapolasi Richardson tidak berfungsi untuk urutan berosilasi. Sebagai solusi sederhana, richardson mendeteksi jika tiga elemen terakhir tidak berbeda secara monoton, dan dalam hal itu berlaku ekstrapolasi hanya untuk elemen indeks genap.</p>
-</blockquote>
-<p><strong>Teori</strong></p>
-<blockquote>
+<p><br/></p>
+<h3 id="teori">Teori</h3>
 <p>Dalam rumus : ( f (x + h) - f (x - h) ) / (2 h)</p>
 <p>untuk nilai h yang sangat kecil, dua fungsi evaluasi <em>f (x + h)</em> dan <em>f (x - h)</em> akan menjadi kira-kira sama, dan oleh karena itu pembatalan subtraktif akan terjadi. Oleh karena itu, tidak disarankan untuk menggunakan nilai h yang semakin kecil.</p>
 <p>Kita dapat mencoba untuk memperkirakan nilai tepat <em>e</em> dengan perkiraan <em>a(h)</em>. Dalam hal ini, <em>e</em> adalah turunan dari <em>f (1) (x)</em> dan perkiraannya adalah <em>( h ) = (f (x + h) - f (x - h)) / (2 h)</em>. Misalkan sekarang bahwa kesalahan aproksimasi didefinisikan oleh serangkaian bentuk Taylor :</p>
@@ -149,8 +157,9 @@
 <ul>
 <li>K1 = −1/6 f(3)(x)h^2, etc.</li>
 </ul>
-</blockquote>
-<p><strong>Contoh Program</strong></p>
+<p><br/></p>
+<h3 id="contoh-program">Contoh Program</h3>
+<h6 id="listing-program">Listing Program</h6>
 <pre><code class="python">from math import *
 def zeros(n,m): 
     Z=[]
@@ -185,7 +194,7 @@ print('diff(2**cos(pi+sin(x)) dengan x = pi/2 adalah %04.20f'%Richardson_dif(lam
 
 </code></pre>
 
-<p><strong>Hasil Running</strong></p>
+<h6 id="hasil-running">Hasil Running</h6>
 <pre><code class="python">Diferensiasi numerik dari
 f(x) = -0.1*x**4 -0.15*x**3 -0.5*x**2 -0.25*x +1.2 dengan x=0.5
 h1 = 0.5
@@ -231,7 +240,7 @@ diff(2**cos(pi+sin(x)) dengan x = pi/2 adalah 0.16849558398154249050
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>Copyright &copy; 2020 Sulton Muhajir</p>
+      <p>&copy; 2020 All Rights Reserved by Sulton Muhajir</p>
     
   </div>
 
