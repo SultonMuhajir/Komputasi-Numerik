@@ -1,155 +1,178 @@
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Monte Carlo Method - Komputasi Numerik</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Monte Carlo Method";
-    var mkdocs_page_input_path = "carlo.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+	<link rel="shortcut icon" href="../img/favicon.ico">
+	<title>Monte Carlo Method - Komputasi Numerik</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link rel="stylesheet" href="../css/theme.css" />
+	<link rel="stylesheet" href="../css/theme_extra.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+
+	<script>
+		// Current page data
+		var mkdocs_page_name = "Monte Carlo Method";
+		var mkdocs_page_input_path = "carlo.md";
+		var mkdocs_page_url = null;
+	</script>
+
+	<script src="../js/jquery-2.1.1.min.js" defer></script>
+	<script src="../js/modernizr-2.8.3.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
-  <div class="wy-grid-for-nav">
+	<div class="wy-grid-for-nav">
 
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Komputasi Numerik</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../error/">Error in Numerical Computation</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../root/">Numerical Solution</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../gaus/">Gauss Elimination</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../romberg/">Romberg Method</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../richardson/">Richardson Extrapolation</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../euler/">Euler Method</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Monte Carlo Method</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#algoritma-metode-monte-carlo">Algoritma Metode Monte Carlo</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#contoh-soal">Contoh Soal</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#listing-program-no1">Listing Program No.1</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#hasil-running-no1">Hasil Running No.1</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#listing-program-no2">Listing Program No.2</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#hasil-running-no2">Hasil Running No.2</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                    </li>
-                </ul>
-      </div>
-    </div>
-    </nav>
+		<nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+			<div class="wy-side-scroll">
+				<div class="wy-side-nav-search">
+					<a href=".." class="icon icon-home"> Komputasi Numerik</a>
+					<div role="search">
+						<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+							<input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+						</form>
+					</div>
+				</div>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+				<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../error/">Error in Numerical
+								Computation</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../root/">Numerical Solution</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../gaus/">Gauss Elimination</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../romberg/">Romberg Method</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../richardson/">Richardson
+								Extrapolation</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../euler/">Euler Method</a>
+						</li>
+					</ul>
+					<ul class="current">
+						<li class="toctree-l1 current"><a class="reference internal current" href="./">Monte Carlo Method</a>
+							<ul class="current">
+								<li class="toctree-l2"><a class="reference internal"
+										href="#algoritma-metode-monte-carlo">Algoritma Metode Monte Carlo</a>
+								</li>
+								<li class="toctree-l2"><a class="reference internal" href="#contoh-soal">Contoh Soal</a>
+								</li>
+								<li class="toctree-l2"><a class="reference internal" href="#listing-program-no1">Listing Program
+										No.1</a>
+									<ul>
+										<li class="toctree-l3"><a class="reference internal" href="#hasil-running-no1">Hasil
+												Running No.1</a>
+										</li>
+									</ul>
+								</li>
+								<li class="toctree-l2"><a class="reference internal" href="#listing-program-no2">Listing Program
+										No.2</a>
+									<ul>
+										<li class="toctree-l3"><a class="reference internal" href="#hasil-running-no2">Hasil
+												Running No.2</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Komputasi Numerik</a>
-      </nav>
+		<section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>Monte Carlo Method</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="metode-monte-carlo">Metode Monte Carlo</h1>
-<p>Metode Monte Carlo adalah algoritma komputasi yang mengandalkan pengambilan sampel acak berulang untuk mendapatkan hasil numerik. Penggunaan metode ini adalah untuk mengevaluasi integral definit, terutama integral multidimensi dengan syarat dan batasan yang rumit.</p>
-<p>Metode ini terbukti efisien dalam memecahkan persamaan diferensial integral medan radians, sehingga metode ini digunakan dalam perhitungan iluminasi global yang menghasilkan gambar-gambar fotorealistik model tiga dimensi, dimana diterapkan dalam video games, arsitektur, perancangan, film yang dihasilkan oleh komputer, efek-efek khusus dalam film, bisnis, ekonomi, dan bidang lainnya. Karena algoritma ini memerlukan pengulangan (repetisi) dan perhitungan yang amat kompleks, metode Monte Carlo pada umumnya dilakukan menggunakan komputer, dan memakai berbagai teknik simulasi komputer.</p>
-<p><br/></p>
-<h3 id="algoritma-metode-monte-carlo">Algoritma Metode Monte Carlo</h3>
-<ol>
-<li>Mendefinisikan distribusi probabilitas dati datamasa lalu atau dari distribusi teoritis.</li>
-<li>Mengkonversikan distribusi kedalam frekuensikumulatif.</li>
-<li>Melakukan simulasi dengan bilangan acak.</li>
-<li>Menganalisa keluaran simulasi.</li>
-</ol>
-<p><br/></p>
-<h3 id="contoh-soal">Contoh Soal</h3>
-<ol>
-<li>Buatlah program untuk memverifikasi secara numerik bahwa ÄÂ =2 0 (4Ă˘ÂÂx2)1/2 dx. Gunakan metode monte carlo dan 2500 angka acak.</li>
-<li>Gunakan metode monte carlo untuk memperkirakan integral 1 Ă˘ÂÂ11 Ă˘ÂÂ11 Ă˘ÂÂ1
-   (x2 + y2 +z2) dxdydz</li>
-</ol>
-<p><br/></p>
-<h3 id="listing-program-no1">Listing Program No.1</h3>
-<pre><code class="python">from scipy import random
+
+			<nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+				<i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+				<a href="..">Komputasi Numerik</a>
+			</nav>
+
+
+			<div class="wy-nav-content">
+				<div class="rst-content">
+					<div role="navigation" aria-label="breadcrumbs navigation">
+						<ul class="wy-breadcrumbs">
+							<li><a href="..">Docs</a> &raquo;</li>
+
+
+
+							<li>Monte Carlo Method</li>
+							<li class="wy-breadcrumbs-aside">
+
+							</li>
+						</ul>
+
+						<hr />
+					</div>
+					<div role="main">
+						<div class="section">
+
+							<h1 id="metode-monte-carlo">Metode Monte Carlo</h1>
+							<p>Metode Monte Carlo adalah algoritma komputasi yang mengandalkan pengambilan sampel acak berulang
+								untuk mendapatkan hasil numerik. Penggunaan metode ini adalah untuk mengevaluasi integral
+								definit, terutama integral multidimensi dengan syarat dan batasan yang rumit.</p>
+							<p>Metode ini terbukti efisien dalam memecahkan persamaan diferensial integral medan radians,
+								sehingga metode ini digunakan dalam perhitungan iluminasi global yang menghasilkan gambar-gambar
+								fotorealistik model tiga dimensi, dimana diterapkan dalam video games, arsitektur, perancangan,
+								film yang dihasilkan oleh komputer, efek-efek khusus dalam film, bisnis, ekonomi, dan bidang
+								lainnya. Karena algoritma ini memerlukan pengulangan (repetisi) dan perhitungan yang amat
+								kompleks, metode Monte Carlo pada umumnya dilakukan menggunakan komputer, dan memakai berbagai
+								teknik simulasi komputer.</p>
+							<p><br /></p>
+							<h3 id="algoritma-metode-monte-carlo">Algoritma Metode Monte Carlo</h3>
+							<ol>
+								<li>Mendefinisikan distribusi probabilitas dati datamasa lalu atau dari distribusi teoritis.
+								</li>
+								<li>Mengkonversikan distribusi kedalam frekuensikumulatif.</li>
+								<li>Melakukan simulasi dengan bilangan acak.</li>
+								<li>Menganalisa keluaran simulasi.</li>
+							</ol>
+							<p><br /></p>
+							<h3 id="contoh-soal">Contoh Soal</h3>
+							<ol>
+								<li>Buatlah program untuk memverifikasi secara numerik bahwa ÄÂ =2 0 (4Ă˘ÂÂx2)1/2 dx.
+									Gunakan metode monte carlo dan 2500 angka acak.</li>
+								<li>Gunakan metode monte carlo untuk memperkirakan integral 1 Ă˘ÂÂ11 Ă˘ÂÂ11 Ă˘ÂÂ1
+									(x2 + y2 +z2) dxdydz</li>
+							</ol>
+							<p><br /></p>
+							<h3 id="listing-program-no1">Listing Program No.1</h3>
+							<pre><p class="copy copy1">Copied</p><i class="far fa-clone" onclick="copyCode1(code1)"></i><code id="code1" class="python">from scipy import random
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -177,11 +200,11 @@ plt.xlabel(&quot;Area&quot;)
 plt.show()
 </code></pre>
 
-<h6 id="hasil-running-no1">Hasil Running No.1</h6>
-<p>Menampilkan gambar hasil komputasi</p>
-<p><br/></p>
-<h3 id="listing-program-no2">Listing Program No.2</h3>
-<pre><code class="python">from scipy import random
+							<h6 id="hasil-running-no1">Hasil Running No.1</h6>
+							<p>Menampilkan gambar hasil komputasi</p>
+							<p><br /></p>
+							<h3 id="listing-program-no2">Listing Program No.2</h3>
+							<pre><p class="copy copy2">Copied</p><i class="far fa-clone" onclick="copyCode2(code2)"></i><code id="code2" class="python">from scipy import random
 import numpy as np
 
 b1 = -1
@@ -213,61 +236,67 @@ hasil=(b2-b1)/float(N)*integral
 print(&quot;Hasil : &quot;,hasil)
 </code></pre>
 
-<h6 id="hasil-running-no2">Hasil Running No.2</h6>
-<pre><code class="python">Fungsi f(x,y,z) = (x**2)+(y**2)+(z**2)
+							<h6 id="hasil-running-no2">Hasil Running No.2</h6>
+							<pre><code class="python">Fungsi f(x,y,z) = (x**2)+(y**2)+(z**2)
 Dengan b1 = -1, b2 = 1, xyz (n) = 3
 Rumus Metode dengan (b2-b1)*1/N*f(x,y,z)
 Hasil :  7.913876364232494
 </code></pre>
-              
-            </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="../euler/" class="btn btn-neutral" title="Euler Method"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
-  
 
-  <hr/>
+						</div>
+					</div>
+					<footer>
 
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-      <p>&copy; 2020 All Rights Reserved by Sulton Muhajir</p>
-    
-  </div>
+						<div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-      
-        </div>
-      </div>
 
-    </section>
+							<a href="../euler/" class="btn btn-neutral" title="Euler Method"><span
+									class="icon icon-circle-arrow-left"></span> Previous</a>
 
-  </div>
+						</div>
 
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../euler/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-    </span>
-</div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
+
+						<hr />
+
+						<div role="contentinfo">
+							<!-- Copyright etc -->
+
+							<p>&copy; 2020 All Rights Reserved by Sulton Muhajir</p>
+
+						</div>
+
+						Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a
+							href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a
+							href="https://readthedocs.org">Read the Docs</a>.
+					</footer>
+
+				</div>
+			</div>
+
+		</section>
+
+	</div>
+
+	<div class="rst-versions" role="note" aria-label="versions">
+		<span class="rst-current-version" data-toggle="rst-current-version">
+
+
+			<span><a href="../euler/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+
+
+		</span>
+	</div>
+	<script>
+		var base_url = '..';
+	</script>
+	<script src="../js/theme.js" defer></script>
+	<script src="../search/main.js" defer></script>
+	<script defer>
+		window.onload = function () {
+			SphinxRtdTheme.Navigation.enable(true);
+		};
+	</script>
 
 </body>
+
 </html>

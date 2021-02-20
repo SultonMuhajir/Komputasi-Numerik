@@ -1,201 +1,223 @@
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Numerical Solution - Komputasi Numerik</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Numerical Solution";
-    var mkdocs_page_input_path = "root.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+	<link rel="shortcut icon" href="../img/favicon.ico">
+	<title>Numerical Solution - Komputasi Numerik</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link rel="stylesheet" href="../css/theme.css" />
+	<link rel="stylesheet" href="../css/theme_extra.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+
+	<script>
+		// Current page data
+		var mkdocs_page_name = "Numerical Solution";
+		var mkdocs_page_input_path = "root.md";
+		var mkdocs_page_url = null;
+	</script>
+
+	<script src="../js/jquery-2.1.1.min.js" defer></script>
+	<script src="../js/modernizr-2.8.3.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
-  <div class="wy-grid-for-nav">
+	<div class="wy-grid-for-nav">
 
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Komputasi Numerik</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../error/">Error in Numerical Computation</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Numerical Solution</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#metode-tertutup">Metode Tertutup</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#metode-terbuka">Metode Terbuka</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#1-bisection">1. Bisection</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#algoritma">Algoritma:</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#contoh-program">Contoh Program</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#hasil-running">Hasil Running</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-regula-falsi">2. Regula Falsi</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#algoritma_1">Algoritma:</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#contoh-program_1">Contoh Program</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#hasil-running_1">Hasil Running</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-newton-raphson">3. Newton Raphson</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#algoritma_2">Algoritma</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#contoh-program_2">Contoh Program</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#hasil-running_2">Hasil Running</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#4-secant">4. Secant</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#algoritma_3">Algoritma :</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#contoh-program_3">Contoh Program</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#hasil-running_3">Hasil Running</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../gaus/">Gauss Elimination</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../romberg/">Romberg Method</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../richardson/">Richardson Extrapolation</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../euler/">Euler Method</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../carlo/">Monte Carlo Method</a>
-                    </li>
-                </ul>
-      </div>
-    </div>
-    </nav>
+		<nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+			<div class="wy-side-scroll">
+				<div class="wy-side-nav-search">
+					<a href=".." class="icon icon-home"> Komputasi Numerik</a>
+					<div role="search">
+						<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+							<input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+						</form>
+					</div>
+				</div>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+				<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../error/">Error in Numerical
+								Computation</a>
+						</li>
+					</ul>
+					<ul class="current">
+						<li class="toctree-l1 current"><a class="reference internal current" href="./">Numerical Solution</a>
+							<ul class="current">
+								<li class="toctree-l2"><a class="reference internal" href="#metode-tertutup">Metode Tertutup</a>
+								</li>
+								<li class="toctree-l2"><a class="reference internal" href="#metode-terbuka">Metode Terbuka</a>
+								</li>
+								<li class="toctree-l2"><a class="reference internal" href="#1-bisection">1. Bisection</a>
+									<ul>
+										<li class="toctree-l3"><a class="reference internal" href="#algoritma">Algoritma:</a>
+										</li>
+										<li class="toctree-l3"><a class="reference internal" href="#contoh-program">Contoh
+												Program</a>
+										</li>
+										<li class="toctree-l3"><a class="reference internal" href="#hasil-running">Hasil
+												Running</a>
+										</li>
+									</ul>
+								</li>
+								<li class="toctree-l2"><a class="reference internal" href="#2-regula-falsi">2. Regula Falsi</a>
+									<ul>
+										<li class="toctree-l3"><a class="reference internal" href="#algoritma_1">Algoritma:</a>
+										</li>
+										<li class="toctree-l3"><a class="reference internal" href="#contoh-program_1">Contoh
+												Program</a>
+										</li>
+										<li class="toctree-l3"><a class="reference internal" href="#hasil-running_1">Hasil
+												Running</a>
+										</li>
+									</ul>
+								</li>
+								<li class="toctree-l2"><a class="reference internal" href="#3-newton-raphson">3. Newton
+										Raphson</a>
+									<ul>
+										<li class="toctree-l3"><a class="reference internal" href="#algoritma_2">Algoritma</a>
+										</li>
+										<li class="toctree-l3"><a class="reference internal" href="#contoh-program_2">Contoh
+												Program</a>
+										</li>
+										<li class="toctree-l3"><a class="reference internal" href="#hasil-running_2">Hasil
+												Running</a>
+										</li>
+									</ul>
+								</li>
+								<li class="toctree-l2"><a class="reference internal" href="#4-secant">4. Secant</a>
+									<ul>
+										<li class="toctree-l3"><a class="reference internal" href="#algoritma_3">Algoritma :</a>
+										</li>
+										<li class="toctree-l3"><a class="reference internal" href="#contoh-program_3">Contoh
+												Program</a>
+										</li>
+										<li class="toctree-l3"><a class="reference internal" href="#hasil-running_3">Hasil
+												Running</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../gaus/">Gauss Elimination</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../romberg/">Romberg Method</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../richardson/">Richardson
+								Extrapolation</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../euler/">Euler Method</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../carlo/">Monte Carlo Method</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Komputasi Numerik</a>
-      </nav>
+		<section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>Numerical Solution</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="numerical-solution-of-algebraic-and-transcendental-equation">Numerical Solution of Algebraic and Transcendental Equation</h1>
-<h6 id="metode-tertutup">Metode Tertutup</h6>
-<ul>
-<li>
-<p>Mencari akar pada range [a,b] tertentu</p>
-</li>
-<li>
-<p>Dalam range[a,b] dipastikan terdapat satu akar</p>
-</li>
-<li>
-<p>Hasil selalu konvergen → disebut juga metode konvergen</p>
-</li>
-<li>
-<p>Contohnya Metode Tabel ,Metode Biseksi,Metode Regula Falsi</p>
-</li>
-</ul>
-<h6 id="metode-terbuka">Metode Terbuka</h6>
-<ul>
-<li>Diperlukan tebakan awal</li>
-<li>xn dipakai untuk menghitung xn+1</li>
-<li>Hasil dapat konvergen atau divergen</li>
-<li>Contohnya Metode Iterasi Sederhana, Metode Newton-Raphson, Metode Secant.</li>
-</ul>
-<h3 id="1-bisection">1. Bisection</h3>
-<p>Metode biseksi ini membagi range menjadi 2 bagian, dari dua bagian ini dipilih bagian mana yang mengandung akar sedangkan bagian yang tidak mengandung akar akan dibuang. Hal ini dilakukan berulang-ulang hingga diperoleh suatu akar persamaan.</p>
-<h6 id="algoritma">Algoritma:</h6>
-<ol>
-<li>Definisikan fungsi f(x) yang akan dicari akarnya</li>
-<li>Tentukan nilai a dan b</li>
-<li>Tentukan toleransi e dan iterasi maksimum N</li>
-<li>Hitung f(a) dan f(b)</li>
-<li>Jika f(a).f(b)&gt;0 maka proses dihentikan karena tidak ada akar, bila tidak maka dilanjutkan</li>
-<li>Hitung x = (a+b)/2</li>
-<li>Hitung f(x)</li>
-<li>Bila f(x).f(a)&lt;0 maka b = x dan f(b)=f(x), bila tidak maka a=x dan f(a)=f(x)</li>
-<li>Jika |b-a|<e atau iterasi > iterasi maks maka proses dihentikan dan didapatkan akar x, bila tidak, ulangi langkah 6</li>
-</ol>
-<h6 id="contoh-program">Contoh Program</h6>
-<pre><code class="python">def bisection(f,a,b,N):
+
+			<nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+				<i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+				<a href="..">Komputasi Numerik</a>
+			</nav>
+
+
+			<div class="wy-nav-content">
+				<div class="rst-content">
+					<div role="navigation" aria-label="breadcrumbs navigation">
+						<ul class="wy-breadcrumbs">
+							<li><a href="..">Docs</a> &raquo;</li>
+
+
+
+							<li>Numerical Solution</li>
+							<li class="wy-breadcrumbs-aside">
+
+							</li>
+						</ul>
+
+						<hr />
+					</div>
+					<div role="main">
+						<div class="section">
+
+							<h1 id="numerical-solution-of-algebraic-and-transcendental-equation">Numerical Solution of
+								Algebraic and Transcendental Equation</h1>
+							<h6 id="metode-tertutup">Metode Tertutup</h6>
+							<ul>
+								<li>
+									<p>Mencari akar pada range [a,b] tertentu</p>
+								</li>
+								<li>
+									<p>Dalam range[a,b] dipastikan terdapat satu akar</p>
+								</li>
+								<li>
+									<p>Hasil selalu konvergen → disebut juga metode konvergen</p>
+								</li>
+								<li>
+									<p>Contohnya Metode Tabel ,Metode Biseksi,Metode Regula Falsi</p>
+								</li>
+							</ul>
+							<h6 id="metode-terbuka">Metode Terbuka</h6>
+							<ul>
+								<li>Diperlukan tebakan awal</li>
+								<li>xn dipakai untuk menghitung xn+1</li>
+								<li>Hasil dapat konvergen atau divergen</li>
+								<li>Contohnya Metode Iterasi Sederhana, Metode Newton-Raphson, Metode Secant.</li>
+							</ul>
+							<h3 id="1-bisection">1. Bisection</h3>
+							<p>Metode biseksi ini membagi range menjadi 2 bagian, dari dua bagian ini dipilih bagian mana yang
+								mengandung akar sedangkan bagian yang tidak mengandung akar akan dibuang. Hal ini dilakukan
+								berulang-ulang hingga diperoleh suatu akar persamaan.</p>
+							<h6 id="algoritma">Algoritma:</h6>
+							<ol>
+								<li>Definisikan fungsi f(x) yang akan dicari akarnya</li>
+								<li>Tentukan nilai a dan b</li>
+								<li>Tentukan toleransi e dan iterasi maksimum N</li>
+								<li>Hitung f(a) dan f(b)</li>
+								<li>Jika f(a).f(b)&gt;0 maka proses dihentikan karena tidak ada akar, bila tidak maka
+									dilanjutkan</li>
+								<li>Hitung x = (a+b)/2</li>
+								<li>Hitung f(x)</li>
+								<li>Bila f(x).f(a)&lt;0 maka b = x dan f(b)=f(x), bila tidak maka a=x dan f(a)=f(x)</li>
+								<li>Jika |b-a|<e atau iterasi> iterasi maks maka proses dihentikan dan didapatkan akar x, bila
+										tidak, ulangi langkah 6</li>
+							</ol>
+							<h6 id="contoh-program">Contoh Program</h6>
+							<pre><p class="copy copy1">Copied</p><i class="far fa-clone" onclick="copyCode1(code1)"></i><code id="code1" class="python">def bisection(f,a,b,N):
 
     if f(a)*f(b) &gt;= 0:
         print(&quot;Bisection method fails.&quot;)
@@ -223,33 +245,35 @@ approx_phi = bisection(f,1,2.3,25)
 print(approx_phi)
 </code></pre>
 
-<h6 id="hasil-running">Hasil Running</h6>
-<pre><code class="python">1.9999999985098835
+							<h6 id="hasil-running">Hasil Running</h6>
+							<pre><code class="python">1.9999999985098835
 </code></pre>
 
-<p><br/></p>
-<h3 id="2-regula-falsi">2. Regula Falsi</h3>
-<ul>
-<li>Metode pencarian akar persamaan dengan memanfaatkan kemiringan dan selisih tinggi dari dua titik batas range.</li>
-<li>Dua titik a dan b pada fungsi f(x) digunakan untuk mengestimasi posisi c dari akar interpolasi linier.</li>
-<li>Dikenal dengan metode False Position</li>
-<li>Metode ini juga merupakan penyempurna dari metode bisection</li>
-</ul>
-<h6 id="algoritma_1">Algoritma:</h6>
-<ol>
-<li>Definisikan fungsi f(x)</li>
-<li>Tentukan batas bawah (a) dan batas atas (b)</li>
-<li>Tentukan toleransi error e</li>
-<li>Hitung f(a) dan f(b)</li>
-<li>Untuk iterasi 1 s/d n &gt; e :</li>
-<li>[ c= (f(b).a -f(a).b)/(f(b)-f(a))</li>
-<li>Hitung f(c)=f(x)</li>
-<li>Hitung error = |f(c)|</li>
-<li>Jika f(c).f(a)&lt;0 maka nilai a tetap ,jika tidak maka a=c dan f(a)=f(c) ]</li>
-<li>Akar persamaanya = c</li>
-</ol>
-<h6 id="contoh-program_1">Contoh Program</h6>
-<pre><code class="python">error = 0.01
+							<p><br /></p>
+							<h3 id="2-regula-falsi">2. Regula Falsi</h3>
+							<ul>
+								<li>Metode pencarian akar persamaan dengan memanfaatkan kemiringan dan selisih tinggi dari dua
+									titik batas range.</li>
+								<li>Dua titik a dan b pada fungsi f(x) digunakan untuk mengestimasi posisi c dari akar
+									interpolasi linier.</li>
+								<li>Dikenal dengan metode False Position</li>
+								<li>Metode ini juga merupakan penyempurna dari metode bisection</li>
+							</ul>
+							<h6 id="algoritma_1">Algoritma:</h6>
+							<ol>
+								<li>Definisikan fungsi f(x)</li>
+								<li>Tentukan batas bawah (a) dan batas atas (b)</li>
+								<li>Tentukan toleransi error e</li>
+								<li>Hitung f(a) dan f(b)</li>
+								<li>Untuk iterasi 1 s/d n &gt; e :</li>
+								<li>[ c= (f(b).a -f(a).b)/(f(b)-f(a))</li>
+								<li>Hitung f(c)=f(x)</li>
+								<li>Hitung error = |f(c)|</li>
+								<li>Jika f(c).f(a)&lt;0 maka nilai a tetap ,jika tidak maka a=c dan f(a)=f(c) ]</li>
+								<li>Akar persamaanya = c</li>
+							</ol>
+							<h6 id="contoh-program_1">Contoh Program</h6>
+							<pre><p class="copy copy2">Copied</p><i class="far fa-clone" onclick="copyCode2(code2)"></i><code id="code2" class="python">error = 0.01
 a = 0
 b = 2.1
 
@@ -281,21 +305,27 @@ def regulasi_falsi(a,b):
 regulasi_falsi(a,b)
 </code></pre>
 
-<h6 id="hasil-running_1">Hasil Running</h6>
-<pre><code>x = 2.000000000174259
+							<h6 id="hasil-running_1">Hasil Running</h6>
+							<pre><code>x = 2.000000000174259
 </code></pre>
 
-<p><br/></p>
-<h3 id="3-newton-raphson">3. Newton Raphson</h3>
-<p>Metode Newton-Raphson adalah metode pencarian akar suatu fungsi f(x) dengan pendekatan satu titik, dimana fungsi f(x) mempunyai turunan. Metode ini dianggap lebih mudah dari Metode Bagi-Dua (Bisection Method) karena metode ini menggunakan pendekatan satu titik sebagai titik awal.</p>
-<h6 id="algoritma_2">Algoritma</h6>
-<ol>
-<li>Menentukan x0 sebagai titik awal.</li>
-<li>Menarik garis lurus (misal garis P) yang menyinggung titik f(x0). Hal ini berakibat garis P memotong sumbu-x di titik x1. </li>
-<li>Ulangi langkah sebelumnya tapi sekarang x1 dianggap sebagai titik awalnya. Dari mengulang langkah-langkah sebelumnya akan mendapatkan x1,x2,x3,...,,xn dengan xn yang diperoleh adalah bilangan riil yang merupakan akar atau mendekati akar yang sebenarnya.</li>
-</ol>
-<h6 id="contoh-program_2">Contoh Program</h6>
-<pre><code class="python">def newton(f,Df,x0,epsilon,max_iter):
+							<p><br /></p>
+							<h3 id="3-newton-raphson">3. Newton Raphson</h3>
+							<p>Metode Newton-Raphson adalah metode pencarian akar suatu fungsi f(x) dengan pendekatan satu
+								titik, dimana fungsi f(x) mempunyai turunan. Metode ini dianggap lebih mudah dari Metode
+								Bagi-Dua (Bisection Method) karena metode ini menggunakan pendekatan satu titik sebagai titik
+								awal.</p>
+							<h6 id="algoritma_2">Algoritma</h6>
+							<ol>
+								<li>Menentukan x0 sebagai titik awal.</li>
+								<li>Menarik garis lurus (misal garis P) yang menyinggung titik f(x0). Hal ini berakibat garis P
+									memotong sumbu-x di titik x1. </li>
+								<li>Ulangi langkah sebelumnya tapi sekarang x1 dianggap sebagai titik awalnya. Dari mengulang
+									langkah-langkah sebelumnya akan mendapatkan x1,x2,x3,...,,xn dengan xn yang diperoleh adalah
+									bilangan riil yang merupakan akar atau mendekati akar yang sebenarnya.</li>
+							</ol>
+							<h6 id="contoh-program_2">Contoh Program</h6>
+							<pre><p class="copy copy3">Copied</p><i class="far fa-clone" onclick="copyCode3(code3)"></i><code id="code3" class="python">def newton(f,Df,x0,epsilon,max_iter):
 
     xn = x0
     for n in range(0,max_iter):
@@ -317,31 +347,34 @@ approx = newton(p,Dp,1,1e-3,10)
 print(approx)
 </code></pre>
 
-<h6 id="hasil-running_2">Hasil Running</h6>
-<pre><code class="python">Found solution after 4 iterations.
+							<h6 id="hasil-running_2">Hasil Running</h6>
+							<pre><code class="python">Found solution after 4 iterations.
 1.9999847409781035
 </code></pre>
 
-<h3 id="4-secant">4. Secant</h3>
-<ul>
-<li>Metode Newton Raphson memerlukan perhitungan turunan fungsi f’(x).</li>
-<li>Tidak semua fungsi mudah dicari turunannya terutama fungsi yang bentuknya rumit.</li>
-<li>Turunan fungsi dapat dihilangkan dengan cara menggantinya dengan bentuk lain yang ekivalen</li>
-<li>Modifikasi metode Newton Raphson dinamakan metode Secant.</li>
-</ul>
-<h6 id="algoritma_3">Algoritma :</h6>
-<ol>
-<li>Definisikan f(x)</li>
-<li>Definisikan toleransi error e dan iterasi maksimum (n)</li>
-<li>Masukan dua nilai pendekatan awal yang diantaranya terdapat akar yaitu x_0 dan x_1 ,sebaiknya gunakan metode tabel untuk menjamin titik pendekatanya adalah titik pendekatan yang konvergensinya pada akar persamaan yang diharapkan.</li>
-<li>Hitung f(x_0 ) dan fx_1 sebagai y_0 dan y_1</li>
-<li>Untuk iterasi 1 s/d n </li>
-<li>[ x_(i+1)= x_i-(f(xi)(x_i 〖-x〗<em>(i-1)))/(y_i - y</em>(i-1) )</li>
-<li>hitung y_(i+1)=〖f(x〗_(i+1)) ]</li>
-<li>Akar persamaan adalah nilai x yang terakhir</li>
-</ol>
-<h6 id="contoh-program_3">Contoh Program</h6>
-<pre><code class="python">def secant(f,a,b,N):
+							<h3 id="4-secant">4. Secant</h3>
+							<ul>
+								<li>Metode Newton Raphson memerlukan perhitungan turunan fungsi f’(x).</li>
+								<li>Tidak semua fungsi mudah dicari turunannya terutama fungsi yang bentuknya rumit.</li>
+								<li>Turunan fungsi dapat dihilangkan dengan cara menggantinya dengan bentuk lain yang ekivalen
+								</li>
+								<li>Modifikasi metode Newton Raphson dinamakan metode Secant.</li>
+							</ul>
+							<h6 id="algoritma_3">Algoritma :</h6>
+							<ol>
+								<li>Definisikan f(x)</li>
+								<li>Definisikan toleransi error e dan iterasi maksimum (n)</li>
+								<li>Masukan dua nilai pendekatan awal yang diantaranya terdapat akar yaitu x_0 dan x_1
+									,sebaiknya gunakan metode tabel untuk menjamin titik pendekatanya adalah titik pendekatan
+									yang konvergensinya pada akar persamaan yang diharapkan.</li>
+								<li>Hitung f(x_0 ) dan fx_1 sebagai y_0 dan y_1</li>
+								<li>Untuk iterasi 1 s/d n </li>
+								<li>[ x_(i+1)= x_i-(f(xi)(x_i 〖-x〗<em>(i-1)))/(y_i - y</em>(i-1) )</li>
+								<li>hitung y_(i+1)=〖f(x〗_(i+1)) ]</li>
+								<li>Akar persamaan adalah nilai x yang terakhir</li>
+							</ol>
+							<h6 id="contoh-program_3">Contoh Program</h6>
+							<pre><p class="copy copy4">Copied</p><i class="far fa-clone" onclick="copyCode4(code4)"></i><code id="code4" class="python">def secant(f,a,b,N):
 
     if f(a)*f(b) &gt;= 0:
         print(&quot;Secant method fails.&quot;)
@@ -370,62 +403,69 @@ approx = secant(p,1,2.4,20)
 print(approx)
 </code></pre>
 
-<h6 id="hasil-running_3">Hasil Running</h6>
-<pre><code class="python">2.0000003178913373
+							<h6 id="hasil-running_3">Hasil Running</h6>
+							<pre><code class="python">2.0000003178913373
 </code></pre>
-              
-            </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../gaus/" class="btn btn-neutral float-right" title="Gauss Elimination">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../error/" class="btn btn-neutral" title="Error in Numerical Computation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
-  
 
-  <hr/>
+						</div>
+					</div>
+					<footer>
 
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-      <p>&copy; 2020 All Rights Reserved by Sulton Muhajir</p>
-    
-  </div>
+						<div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-      
-        </div>
-      </div>
+							<a href="../gaus/" class="btn btn-neutral float-right" title="Gauss Elimination">Next <span
+									class="icon icon-circle-arrow-right"></span></a>
 
-    </section>
 
-  </div>
+							<a href="../error/" class="btn btn-neutral" title="Error in Numerical Computation"><span
+									class="icon icon-circle-arrow-left"></span> Previous</a>
 
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../error/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../gaus/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
+						</div>
+
+
+						<hr />
+
+						<div role="contentinfo">
+							<!-- Copyright etc -->
+
+							<p>&copy; 2020 All Rights Reserved by Sulton Muhajir</p>
+
+						</div>
+
+						Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a
+							href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a
+							href="https://readthedocs.org">Read the Docs</a>.
+					</footer>
+
+				</div>
+			</div>
+
+		</section>
+
+	</div>
+
+	<div class="rst-versions" role="note" aria-label="versions">
+		<span class="rst-current-version" data-toggle="rst-current-version">
+
+
+			<span><a href="../error/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+
+
+			<span style="margin-left: 15px"><a href="../gaus/" style="color: #fcfcfc">Next &raquo;</a></span>
+
+		</span>
+	</div>
+	<script>
+		var base_url = '..';
+	</script>
+	<script src="../js/theme.js" defer></script>
+	<script src="../search/main.js" defer></script>
+	<script defer>
+		window.onload = function () {
+			SphinxRtdTheme.Navigation.enable(true);
+		};
+	</script>
 
 </body>
+
 </html>

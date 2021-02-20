@@ -1,166 +1,190 @@
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Richardson Extrapolation - Komputasi Numerik</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Richardson Extrapolation";
-    var mkdocs_page_input_path = "richardson.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+	<link rel="shortcut icon" href="../img/favicon.ico">
+	<title>Richardson Extrapolation - Komputasi Numerik</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link rel="stylesheet" href="../css/theme.css" />
+	<link rel="stylesheet" href="../css/theme_extra.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+
+	<script>
+		// Current page data
+		var mkdocs_page_name = "Richardson Extrapolation";
+		var mkdocs_page_input_path = "richardson.md";
+		var mkdocs_page_url = null;
+	</script>
+
+	<script src="../js/jquery-2.1.1.min.js" defer></script>
+	<script src="../js/modernizr-2.8.3.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
-  <div class="wy-grid-for-nav">
+	<div class="wy-grid-for-nav">
 
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Komputasi Numerik</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../error/">Error in Numerical Computation</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../root/">Numerical Solution</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../gaus/">Gauss Elimination</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../romberg/">Romberg Method</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Richardson Extrapolation</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#teori">Teori</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#contoh-program">Contoh Program</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#listing-program">Listing Program</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#hasil-running">Hasil Running</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../euler/">Euler Method</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../carlo/">Monte Carlo Method</a>
-                    </li>
-                </ul>
-      </div>
-    </div>
-    </nav>
+		<nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+			<div class="wy-side-scroll">
+				<div class="wy-side-nav-search">
+					<a href=".." class="icon icon-home"> Komputasi Numerik</a>
+					<div role="search">
+						<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+							<input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+						</form>
+					</div>
+				</div>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+				<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../error/">Error in Numerical
+								Computation</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../root/">Numerical Solution</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../gaus/">Gauss Elimination</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../romberg/">Romberg Method</a>
+						</li>
+					</ul>
+					<ul class="current">
+						<li class="toctree-l1 current"><a class="reference internal current" href="./">Richardson
+								Extrapolation</a>
+							<ul class="current">
+								<li class="toctree-l2"><a class="reference internal" href="#teori">Teori</a>
+								</li>
+								<li class="toctree-l2"><a class="reference internal" href="#contoh-program">Contoh Program</a>
+									<ul>
+										<li class="toctree-l3"><a class="reference internal" href="#listing-program">Listing
+												Program</a>
+										</li>
+										<li class="toctree-l3"><a class="reference internal" href="#hasil-running">Hasil
+												Running</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../euler/">Euler Method</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../carlo/">Monte Carlo Method</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Komputasi Numerik</a>
-      </nav>
+		<section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>Richardson Extrapolation</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="richardson-extrapolation">Richardson Extrapolation</h1>
-<p>Dalam analisis numerik,ekstrapolasi Richardson adalah metode percepatan urutan, yang digunakan untuk meningkatkan laju konvergensi suatu urutan. Ekstrapolasi Richardson diterapkan pada barisan pendekatan nilai opsi untuk mempercepat laju konvergensinya.</p>
-<p>Aplikasi praktis ekstrapolasi Richardson termasuk integrasi Romberg, yang menerapkan ekstrapolasi Richardson pada aturan trapesium, dan algoritma Bulirsch-Stoer untuk menyelesaikan persamaan diferensial biasa.</p>
-<p>Metode Richardson tidak dapat menghasilkan estimasi untuk kesalahan perkiraan. Salah satu cara untuk memperkirakan kesalahan adalah dengan melakukan dua ekstrapolasi dengan NN yang sedikit berbeda dan membandingkan hasilnya.</p>
-<p>Ekstrapolasi Richardson tidak berfungsi untuk urutan berosilasi. Sebagai solusi sederhana, richardson mendeteksi jika tiga elemen terakhir tidak berbeda secara monoton, dan dalam hal itu berlaku ekstrapolasi hanya untuk elemen indeks genap.</p>
-<p><br/></p>
-<h3 id="teori">Teori</h3>
-<p>Dalam rumus : ( f (x + h) - f (x - h) ) / (2 h)</p>
-<p>untuk nilai h yang sangat kecil, dua fungsi evaluasi <em>f (x + h)</em> dan <em>f (x - h)</em> akan menjadi kira-kira sama, dan oleh karena itu pembatalan subtraktif akan terjadi. Oleh karena itu, tidak disarankan untuk menggunakan nilai h yang semakin kecil.</p>
-<p>Kita dapat mencoba untuk memperkirakan nilai tepat <em>e</em> dengan perkiraan <em>a(h)</em>. Dalam hal ini, <em>e</em> adalah turunan dari <em>f (1) (x)</em> dan perkiraannya adalah <em>( h ) = (f (x + h) - f (x - h)) / (2 h)</em>. Misalkan sekarang bahwa kesalahan aproksimasi didefinisikan oleh serangkaian bentuk Taylor :</p>
-<ul>
-<li>e = a(h) + K h^n + o(h^n)</li>
-</ul>
-<p>Apabila menggunakan <em>h / 2</em> :</p>
-<ul>
-<li>
-<p>e = a(h/2) + K (h/2)n + o((h/2)n) </p>
-</li>
-<li>
-<p>e =  a(h/2) + K/2n h^n + o(h^n)</p>
-</li>
-</ul>
-<p>Mengalikan kedua ekspresi ini dengan 2<em>n</em> dan mengurangi hasil persamaan pertama</p>
-<ul>
-<li>2n^e − e = 2na(h/2) − a(h) + K/2n h^n − K h^n + o(h^n)</li>
-</ul>
-<p>Perhatikan bahwa istilah hn dibatalkan dan kita dibiarkan dengan</p>
-<ul>
-<li>(2n − 1)e = 2na(h/2) − a(h) + o(h^n)</li>
-</ul>
-<p>Jika kita melihat seri Taylor lengkap untuk rumus perbedaan-terpusat yang terpusat, kita perhatikan bahwa istilah kesalahannya dalam bentuk Knhn. Dapat kita tulis dengan :</p>
-<ul>
-<li>K1 = −1/6 f(3)(x)h^2, etc.</li>
-</ul>
-<p><br/></p>
-<h3 id="contoh-program">Contoh Program</h3>
-<h6 id="listing-program">Listing Program</h6>
-<pre><code class="python">from math import *
+
+			<nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+				<i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+				<a href="..">Komputasi Numerik</a>
+			</nav>
+
+
+			<div class="wy-nav-content">
+				<div class="rst-content">
+					<div role="navigation" aria-label="breadcrumbs navigation">
+						<ul class="wy-breadcrumbs">
+							<li><a href="..">Docs</a> &raquo;</li>
+
+
+
+							<li>Richardson Extrapolation</li>
+							<li class="wy-breadcrumbs-aside">
+
+							</li>
+						</ul>
+
+						<hr />
+					</div>
+					<div role="main">
+						<div class="section">
+
+							<h1 id="richardson-extrapolation">Richardson Extrapolation</h1>
+							<p>Dalam analisis numerik,ekstrapolasi Richardson adalah metode percepatan urutan, yang digunakan
+								untuk meningkatkan laju konvergensi suatu urutan. Ekstrapolasi Richardson diterapkan pada
+								barisan pendekatan nilai opsi untuk mempercepat laju konvergensinya.</p>
+							<p>Aplikasi praktis ekstrapolasi Richardson termasuk integrasi Romberg, yang menerapkan
+								ekstrapolasi Richardson pada aturan trapesium, dan algoritma Bulirsch-Stoer untuk menyelesaikan
+								persamaan diferensial biasa.</p>
+							<p>Metode Richardson tidak dapat menghasilkan estimasi untuk kesalahan perkiraan. Salah satu cara
+								untuk memperkirakan kesalahan adalah dengan melakukan dua ekstrapolasi dengan NN yang sedikit
+								berbeda dan membandingkan hasilnya.</p>
+							<p>Ekstrapolasi Richardson tidak berfungsi untuk urutan berosilasi. Sebagai solusi sederhana,
+								richardson mendeteksi jika tiga elemen terakhir tidak berbeda secara monoton, dan dalam hal itu
+								berlaku ekstrapolasi hanya untuk elemen indeks genap.</p>
+							<p><br /></p>
+							<h3 id="teori">Teori</h3>
+							<p>Dalam rumus : ( f (x + h) - f (x - h) ) / (2 h)</p>
+							<p>untuk nilai h yang sangat kecil, dua fungsi evaluasi <em>f (x + h)</em> dan <em>f (x - h)</em>
+								akan menjadi kira-kira sama, dan oleh karena itu pembatalan subtraktif akan terjadi. Oleh karena
+								itu, tidak disarankan untuk menggunakan nilai h yang semakin kecil.</p>
+							<p>Kita dapat mencoba untuk memperkirakan nilai tepat <em>e</em> dengan perkiraan <em>a(h)</em>.
+								Dalam hal ini, <em>e</em> adalah turunan dari <em>f (1) (x)</em> dan perkiraannya adalah <em>( h
+									) = (f (x + h) - f (x - h)) / (2 h)</em>. Misalkan sekarang bahwa kesalahan aproksimasi
+								didefinisikan oleh serangkaian bentuk Taylor :</p>
+							<ul>
+								<li>e = a(h) + K h^n + o(h^n)</li>
+							</ul>
+							<p>Apabila menggunakan <em>h / 2</em> :</p>
+							<ul>
+								<li>
+									<p>e = a(h/2) + K (h/2)n + o((h/2)n) </p>
+								</li>
+								<li>
+									<p>e = a(h/2) + K/2n h^n + o(h^n)</p>
+								</li>
+							</ul>
+							<p>Mengalikan kedua ekspresi ini dengan 2<em>n</em> dan mengurangi hasil persamaan pertama</p>
+							<ul>
+								<li>2n^e − e = 2na(h/2) − a(h) + K/2n h^n − K h^n + o(h^n)</li>
+							</ul>
+							<p>Perhatikan bahwa istilah hn dibatalkan dan kita dibiarkan dengan</p>
+							<ul>
+								<li>(2n − 1)e = 2na(h/2) − a(h) + o(h^n)</li>
+							</ul>
+							<p>Jika kita melihat seri Taylor lengkap untuk rumus perbedaan-terpusat yang terpusat, kita
+								perhatikan bahwa istilah kesalahannya dalam bentuk Knhn. Dapat kita tulis dengan :</p>
+							<ul>
+								<li>K1 = −1/6 f(3)(x)h^2, etc.</li>
+							</ul>
+							<p><br /></p>
+							<h3 id="contoh-program">Contoh Program</h3>
+							<h6 id="listing-program">Listing Program</h6>
+							<pre><p class="copy copy1">Copied</p><i class="far fa-clone" onclick="copyCode1(code1)"></i><code id="code1" class="python">from math import *
 def zeros(n,m): 
     Z=[]
     for i in range(n):
@@ -194,8 +218,8 @@ print('diff(2**cos(pi+sin(x)) dengan x = pi/2 adalah %04.20f'%Richardson_dif(lam
 
 </code></pre>
 
-<h6 id="hasil-running">Hasil Running</h6>
-<pre><code class="python">Diferensiasi numerik dari
+							<h6 id="hasil-running">Hasil Running</h6>
+							<pre><code class="python">Diferensiasi numerik dari
 f(x) = -0.1*x**4 -0.15*x**3 -0.5*x**2 -0.25*x +1.2 dengan x=0.5
 h1 = 0.5
 h2 = 0.5/2=0.25
@@ -220,59 +244,66 @@ Estimasi , f'(x) =  0.1684955839815425
 Estimasi , f'(x) =  0.1684955839815425
 diff(2**cos(pi+sin(x)) dengan x = pi/2 adalah 0.16849558398154249050
 </code></pre>
-              
-            </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../euler/" class="btn btn-neutral float-right" title="Euler Method">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../romberg/" class="btn btn-neutral" title="Romberg Method"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
-  
 
-  <hr/>
+						</div>
+					</div>
+					<footer>
 
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-      <p>&copy; 2020 All Rights Reserved by Sulton Muhajir</p>
-    
-  </div>
+						<div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-      
-        </div>
-      </div>
+							<a href="../euler/" class="btn btn-neutral float-right" title="Euler Method">Next <span
+									class="icon icon-circle-arrow-right"></span></a>
 
-    </section>
 
-  </div>
+							<a href="../romberg/" class="btn btn-neutral" title="Romberg Method"><span
+									class="icon icon-circle-arrow-left"></span> Previous</a>
 
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../romberg/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../euler/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
+						</div>
+
+
+						<hr />
+
+						<div role="contentinfo">
+							<!-- Copyright etc -->
+
+							<p>&copy; 2020 All Rights Reserved by Sulton Muhajir</p>
+
+						</div>
+
+						Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a
+							href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a
+							href="https://readthedocs.org">Read the Docs</a>.
+					</footer>
+
+				</div>
+			</div>
+
+		</section>
+
+	</div>
+
+	<div class="rst-versions" role="note" aria-label="versions">
+		<span class="rst-current-version" data-toggle="rst-current-version">
+
+
+			<span><a href="../romberg/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+
+
+			<span style="margin-left: 15px"><a href="../euler/" style="color: #fcfcfc">Next &raquo;</a></span>
+
+		</span>
+	</div>
+	<script>
+		var base_url = '..';
+	</script>
+	<script src="../js/theme.js" defer></script>
+	<script src="../search/main.js" defer></script>
+	<script defer>
+		window.onload = function () {
+			SphinxRtdTheme.Navigation.enable(true);
+		};
+	</script>
 
 </body>
+
 </html>

@@ -1,149 +1,181 @@
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Romberg Method - Komputasi Numerik</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Romberg Method";
-    var mkdocs_page_input_path = "romberg.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+	<link rel="shortcut icon" href="../img/favicon.ico">
+	<title>Romberg Method - Komputasi Numerik</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link rel="stylesheet" href="../css/theme.css" />
+	<link rel="stylesheet" href="../css/theme_extra.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+
+	<script>
+		// Current page data
+		var mkdocs_page_name = "Romberg Method";
+		var mkdocs_page_input_path = "romberg.md";
+		var mkdocs_page_url = null;
+	</script>
+
+	<script src="../js/jquery-2.1.1.min.js" defer></script>
+	<script src="../js/modernizr-2.8.3.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
-  <div class="wy-grid-for-nav">
+	<div class="wy-grid-for-nav">
 
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Komputasi Numerik</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../error/">Error in Numerical Computation</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../root/">Numerical Solution</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../gaus/">Gauss Elimination</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Romberg Method</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#algoritma">Algoritma :</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#contoh-program">Contoh Program</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#listing-program">Listing Program</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#hasil-running">Hasil Running</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../richardson/">Richardson Extrapolation</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../euler/">Euler Method</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../carlo/">Monte Carlo Method</a>
-                    </li>
-                </ul>
-      </div>
-    </div>
-    </nav>
+		<nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+			<div class="wy-side-scroll">
+				<div class="wy-side-nav-search">
+					<a href=".." class="icon icon-home"> Komputasi Numerik</a>
+					<div role="search">
+						<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+							<input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+						</form>
+					</div>
+				</div>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+				<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../error/">Error in Numerical
+								Computation</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../root/">Numerical Solution</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../gaus/">Gauss Elimination</a>
+						</li>
+					</ul>
+					<ul class="current">
+						<li class="toctree-l1 current"><a class="reference internal current" href="./">Romberg Method</a>
+							<ul class="current">
+								<li class="toctree-l2"><a class="reference internal" href="#algoritma">Algoritma :</a>
+								</li>
+								<li class="toctree-l2"><a class="reference internal" href="#contoh-program">Contoh Program</a>
+									<ul>
+										<li class="toctree-l3"><a class="reference internal" href="#listing-program">Listing
+												Program</a>
+										</li>
+										<li class="toctree-l3"><a class="reference internal" href="#hasil-running">Hasil
+												Running</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../richardson/">Richardson
+								Extrapolation</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../euler/">Euler Method</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../carlo/">Monte Carlo Method</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Komputasi Numerik</a>
-      </nav>
+		<section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>Romberg Method</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="metode-romberg">Metode Romberg</h1>
-<p>Metode Romberg adalah metode perhitungan yang didasarkan trapezional rule dan error calcultion sehingga dapat menghasilan nilai integral dengan tingkat presisi yang tinggi. Metode integrasi Romberg didasarkan pada perluasan ekstrapolasi Richardson untuk memperoleh nilai integrasi yang semakin baik.</p>
-<p>Metode ini sering digunakan untuk memperbaiki hasil aproksimasi oleh metode selisih terhingga. Metode ini dipakai untuk evaluasi numerik dari integral tentu. Untuk dua interval bagian yang berbeda yang panjangnya h1 dan h2 akan diperoleh aproksimasi nilai-nilai I1 dan I2, kemudian diperoleh kekeliruan E1 dan E2.</p>
-<p><br/></p>
-<h3 id="algoritma">Algoritma :</h3>
-<ol>
-<li>Mendefinisikan fungsi integral f(x)</li>
-<li>Menentukan batas-batas integral dengan nilai konstanta</li>
-<li>Menentukan jumlah iterasi (N)</li>
-<li>Menentukan nilai interval pada [a,b] atau bisa dengan [x2,x1] lalu menghitung h nya dengan cara : h=x2−x1</li>
-<li>Menghitung nilai integrasi pada kolom pertama dengan rumus : R(1,1) = T0 = h2(f(x1,y)+f(x2,y))</li>
-<li>Menghitung nilai integrasi pada baris kedua sampai n pada kolom pertama dengan rumus : $$ R(n,1) = T_{k+1} = {T_k \over 2} + {h \over 2^{k+1}} \sum^{2^k}<em>{n=1}f</em>{2r-1};f(i) = f(x_1+ i {h \over 2^{k+1}}, n&gt;=2) $$</li>
-<li>Menghitung nilai integrasi pada kolom kedua sampai n dengan menggunakan rumus integrasi Romberg : R(n,m) = 4m−1R(n,m−1)−R(n−1,m−1)  /  4m−1−1</li>
-</ol>
-<p><br/></p>
-<p>Integrasi Romberg juga dapat diartikan sebagai teknik yang digunakan dalam integrasi numerik untuk menganalisis kasus dimana fungsi yang akan diintegrasikan tersedia. Teknik ini memiliki keunggulan untuk menghasilkan nilai-nilai dari fungsi yang digunakan untuk mengembangkan skema yang efisien bagi pengintegrasian secara numerik. Integrasi Romberg didasarkan pada ekstrapolasi Richardson ( ekstrapolasi Richardson ( Richardso Richardson’s n’s extrapol extrapolation ation), yaitu metode untuk mengkombinasikan ), yaitu metode untuk mengkombinasikan dua perkiraan integral secara numerik untuk memperoleh nilai ketiga, yang lebih akurat.</p>
-<p>Teknik ini bersifat rekursif dan dapat digunakan untuk menghasilkan sebuah perkiraan integral dalam batas toleransi kesalahan ( integral dalam batas toleransi kesalahan (error tolerance error tolerance) yang sudah ditentukan terlebih dahulu. ) yang sudah ditentukan terlebih dahulu. Metode ini digunakan untuk memperbaiki hasil pendekatan integrasi metode trapesium, karena kesalahan metode t kesalahan metode trapesium “cukup” besar rapesium “cukup” besar untuk polinom untuk polinom pangkat tinggi pangkat tinggidan fungsi transeden.</p>
-<p><br/></p>
-<h3 id="contoh-program">Contoh Program</h3>
-<h6 id="listing-program">Listing Program</h6>
-<pre><code class="python">import numpy as np
+
+			<nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+				<i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+				<a href="..">Komputasi Numerik</a>
+			</nav>
+
+
+			<div class="wy-nav-content">
+				<div class="rst-content">
+					<div role="navigation" aria-label="breadcrumbs navigation">
+						<ul class="wy-breadcrumbs">
+							<li><a href="..">Docs</a> &raquo;</li>
+
+
+
+							<li>Romberg Method</li>
+							<li class="wy-breadcrumbs-aside">
+
+							</li>
+						</ul>
+
+						<hr />
+					</div>
+					<div role="main">
+						<div class="section">
+
+							<h1 id="metode-romberg">Metode Romberg</h1>
+							<p>Metode Romberg adalah metode perhitungan yang didasarkan trapezional rule dan error calcultion
+								sehingga dapat menghasilan nilai integral dengan tingkat presisi yang tinggi. Metode integrasi
+								Romberg didasarkan pada perluasan ekstrapolasi Richardson untuk memperoleh nilai integrasi yang
+								semakin baik.</p>
+							<p>Metode ini sering digunakan untuk memperbaiki hasil aproksimasi oleh metode selisih terhingga.
+								Metode ini dipakai untuk evaluasi numerik dari integral tentu. Untuk dua interval bagian yang
+								berbeda yang panjangnya h1 dan h2 akan diperoleh aproksimasi nilai-nilai I1 dan I2, kemudian
+								diperoleh kekeliruan E1 dan E2.</p>
+							<p><br /></p>
+							<h3 id="algoritma">Algoritma :</h3>
+							<ol>
+								<li>Mendefinisikan fungsi integral f(x)</li>
+								<li>Menentukan batas-batas integral dengan nilai konstanta</li>
+								<li>Menentukan jumlah iterasi (N)</li>
+								<li>Menentukan nilai interval pada [a,b] atau bisa dengan [x2,x1] lalu menghitung h nya dengan
+									cara : h=x2−x1</li>
+								<li>Menghitung nilai integrasi pada kolom pertama dengan rumus : R(1,1) = T0 =
+									h2(f(x1,y)+f(x2,y))</li>
+								<li>Menghitung nilai integrasi pada baris kedua sampai n pada kolom pertama dengan rumus : $$
+									R(n,1) = T_{k+1} = {T_k \over 2} + {h \over 2^{k+1}} \sum^{2^k}<em>{n=1}f</em>{2r-1};f(i) =
+									f(x_1+ i {h \over 2^{k+1}}, n&gt;=2) $$</li>
+								<li>Menghitung nilai integrasi pada kolom kedua sampai n dengan menggunakan rumus integrasi
+									Romberg : R(n,m) = 4m−1R(n,m−1)−R(n−1,m−1) / 4m−1−1</li>
+							</ol>
+							<p><br /></p>
+							<p>Integrasi Romberg juga dapat diartikan sebagai teknik yang digunakan dalam integrasi numerik
+								untuk menganalisis kasus dimana fungsi yang akan diintegrasikan tersedia. Teknik ini memiliki
+								keunggulan untuk menghasilkan nilai-nilai dari fungsi yang digunakan untuk mengembangkan skema
+								yang efisien bagi pengintegrasian secara numerik. Integrasi Romberg didasarkan pada ekstrapolasi
+								Richardson ( ekstrapolasi Richardson ( Richardso Richardson’s n’s extrapol extrapolation ation),
+								yaitu metode untuk mengkombinasikan ), yaitu metode untuk mengkombinasikan dua perkiraan
+								integral secara numerik untuk memperoleh nilai ketiga, yang lebih akurat.</p>
+							<p>Teknik ini bersifat rekursif dan dapat digunakan untuk menghasilkan sebuah perkiraan integral
+								dalam batas toleransi kesalahan ( integral dalam batas toleransi kesalahan (error tolerance
+								error tolerance) yang sudah ditentukan terlebih dahulu. ) yang sudah ditentukan terlebih dahulu.
+								Metode ini digunakan untuk memperbaiki hasil pendekatan integrasi metode trapesium, karena
+								kesalahan metode t kesalahan metode trapesium “cukup” besar rapesium “cukup” besar untuk polinom
+								untuk polinom pangkat tinggi pangkat tinggidan fungsi transeden.</p>
+							<p><br /></p>
+							<h3 id="contoh-program">Contoh Program</h3>
+							<h6 id="listing-program">Listing Program</h6>
+							<pre><p class="copy copy1">Copied</p><i class="far fa-clone" onclick="copyCode1(code1)"></i><code id="code1" class="python">import numpy as np
 
 def trapezcomp(f, a, b, n):
     #Inisialisasi
@@ -186,77 +218,84 @@ if __name__ == '__main__':
 
 </code></pre>
 
-<h6 id="hasil-running">Hasil Running</h6>
-<pre><code class="python">[0.78539816]
+							<h6 id="hasil-running">Hasil Running</h6>
+							<pre><code class="python">[0.78539816]
 [0.94805945 1.00227988]
 [0.9871158  1.00013458 0.99999157]
 [0.99678517 1.0000083  0.99999988 1.00000001]
 Solusi yang didapatkan = 1.0000000081440203
 </code></pre>
 
-<blockquote>
-<p>Keterangan</p>
-<ul>
-<li>f : fungsi untuk diintegrasikan.</li>
-<li>a : batas bawah integrasi.</li>
-<li>b : batas atas.</li>
-<li>n : jumlah panel untuk dibuat antara a dan b.</li>
-<li>p : jumlah baris dalam tabel Romberg.</li>
-</ul>
-</blockquote>
-              
-            </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../richardson/" class="btn btn-neutral float-right" title="Richardson Extrapolation">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../gaus/" class="btn btn-neutral" title="Gauss Elimination"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
-  
+							<blockquote>
+								<p>Keterangan</p>
+								<ul>
+									<li>f : fungsi untuk diintegrasikan.</li>
+									<li>a : batas bawah integrasi.</li>
+									<li>b : batas atas.</li>
+									<li>n : jumlah panel untuk dibuat antara a dan b.</li>
+									<li>p : jumlah baris dalam tabel Romberg.</li>
+								</ul>
+							</blockquote>
 
-  <hr/>
+						</div>
+					</div>
+					<footer>
 
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-      <p>&copy; 2020 All Rights Reserved by Sulton Muhajir</p>
-    
-  </div>
+						<div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-      
-        </div>
-      </div>
+							<a href="../richardson/" class="btn btn-neutral float-right" title="Richardson Extrapolation">Next
+								<span class="icon icon-circle-arrow-right"></span></a>
 
-    </section>
 
-  </div>
+							<a href="../gaus/" class="btn btn-neutral" title="Gauss Elimination"><span
+									class="icon icon-circle-arrow-left"></span> Previous</a>
 
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../gaus/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../richardson/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
+						</div>
+
+
+						<hr />
+
+						<div role="contentinfo">
+							<!-- Copyright etc -->
+
+							<p>&copy; 2020 All Rights Reserved by Sulton Muhajir</p>
+
+						</div>
+
+						Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a
+							href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a
+							href="https://readthedocs.org">Read the Docs</a>.
+					</footer>
+
+				</div>
+			</div>
+
+		</section>
+
+	</div>
+
+	<div class="rst-versions" role="note" aria-label="versions">
+		<span class="rst-current-version" data-toggle="rst-current-version">
+
+
+			<span><a href="../gaus/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+
+
+			<span style="margin-left: 15px"><a href="../richardson/" style="color: #fcfcfc">Next &raquo;</a></span>
+
+		</span>
+	</div>
+	<script>
+		var base_url = '..';
+	</script>
+	<script src="../js/theme.js" defer></script>
+	<script src="../search/main.js" defer></script>
+	<script defer>
+		window.onload = function () {
+			SphinxRtdTheme.Navigation.enable(true);
+		};
+	</script>
 
 </body>
+
 </html>

@@ -1,149 +1,166 @@
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Euler Method - Komputasi Numerik</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Euler Method";
-    var mkdocs_page_input_path = "euler.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+	<link rel="shortcut icon" href="../img/favicon.ico">
+	<title>Euler Method - Komputasi Numerik</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link rel="stylesheet" href="../css/theme.css" />
+	<link rel="stylesheet" href="../css/theme_extra.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+
+	<script>
+		// Current page data
+		var mkdocs_page_name = "Euler Method";
+		var mkdocs_page_input_path = "euler.md";
+		var mkdocs_page_url = null;
+	</script>
+
+	<script src="../js/jquery-2.1.1.min.js" defer></script>
+	<script src="../js/modernizr-2.8.3.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
-  <div class="wy-grid-for-nav">
+	<div class="wy-grid-for-nav">
 
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Komputasi Numerik</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../error/">Error in Numerical Computation</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../root/">Numerical Solution</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../gaus/">Gauss Elimination</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../romberg/">Romberg Method</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../richardson/">Richardson Extrapolation</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Euler Method</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#algoritma-metode-euler">Algoritma Metode Euler</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#contoh-soal">Contoh Soal</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#listing-program">Listing Program</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#hasil-running">Hasil Running</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../carlo/">Monte Carlo Method</a>
-                    </li>
-                </ul>
-      </div>
-    </div>
-    </nav>
+		<nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+			<div class="wy-side-scroll">
+				<div class="wy-side-nav-search">
+					<a href=".." class="icon icon-home"> Komputasi Numerik</a>
+					<div role="search">
+						<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+							<input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+						</form>
+					</div>
+				</div>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+				<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../error/">Error in Numerical
+								Computation</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../root/">Numerical Solution</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../gaus/">Gauss Elimination</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../romberg/">Romberg Method</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../richardson/">Richardson
+								Extrapolation</a>
+						</li>
+					</ul>
+					<ul class="current">
+						<li class="toctree-l1 current"><a class="reference internal current" href="./">Euler Method</a>
+							<ul class="current">
+								<li class="toctree-l2"><a class="reference internal" href="#algoritma-metode-euler">Algoritma
+										Metode Euler</a>
+								</li>
+								<li class="toctree-l2"><a class="reference internal" href="#contoh-soal">Contoh Soal</a>
+									<ul>
+										<li class="toctree-l3"><a class="reference internal" href="#listing-program">Listing
+												Program</a>
+										</li>
+										<li class="toctree-l3"><a class="reference internal" href="#hasil-running">Hasil
+												Running</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../carlo/">Monte Carlo Method</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Komputasi Numerik</a>
-      </nav>
+		<section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>Euler Method</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="metode-euler">Metode Euler</h1>
-<p>Dalam matematika dan ilmu komputasi, metode euler juga disebut metode forward euler adalah prosedur numerik orde pertama untuk menyelesaikan persamaan differensial biasa dengan nilai awal yang diberikan.</p>
-<p>Metode Euler adalah salah satu metode satu langkah paling sederhana. Dibandingkan dengan beberapa metode lain, metode ini paling tidak teliti. Namun, metode ini perlu dipelajari mengingat kesederhanaan dan pemahaman yang mudah sehingga membuatnya lebih mudah untuk mempelajari metode lain secara lebih menyeluruh.</p>
-<p>Metode Euler merupakan metode paling sederhana yang diturunkan dari deret Taylor. Penyelesaian initial value problems menggunakan metode Euler dilakukan melalui persamaan</p>
-<p><em>yi + 1 = yi + f(xi,yi) h</em></p>
-<p>dimana i merupakan tahap iterasi.</p>
-<p><br/></p>
-<h3 id="algoritma-metode-euler">Algoritma Metode Euler</h3>
-<ol>
-<li>Tentukan titik awal integrasi x0 dan y0</li>
-<li>Tentukan jumlah iterasi n dan step size h yang digunakan.</li>
-<li>Lakukan integrasi menggunakan persamaan diatas.</li>
-</ol>
-<p><br/></p>
-<h3 id="contoh-soal">Contoh Soal</h3>
-<p>Membuat program untuk menyelesaikan persamaan differensial berikut menggunakan Metode Euler</p>
-<p>dy/dx = 1 + x^2,  y(1) = -4</p>
-<p>Untuk menentukan y(1.01), y(1.02) dan y(1.03)</p>
-<p><br/></p>
-<h6 id="listing-program">Listing Program</h6>
-<pre><code class="python">print(&quot;f(x,y) = 1+x^2&quot;)
+
+			<nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+				<i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+				<a href="..">Komputasi Numerik</a>
+			</nav>
+
+
+			<div class="wy-nav-content">
+				<div class="rst-content">
+					<div role="navigation" aria-label="breadcrumbs navigation">
+						<ul class="wy-breadcrumbs">
+							<li><a href="..">Docs</a> &raquo;</li>
+
+
+
+							<li>Euler Method</li>
+							<li class="wy-breadcrumbs-aside">
+
+							</li>
+						</ul>
+
+						<hr />
+					</div>
+					<div role="main">
+						<div class="section">
+
+							<h1 id="metode-euler">Metode Euler</h1>
+							<p>Dalam matematika dan ilmu komputasi, metode euler juga disebut metode forward euler adalah
+								prosedur numerik orde pertama untuk menyelesaikan persamaan differensial biasa dengan nilai awal
+								yang diberikan.</p>
+							<p>Metode Euler adalah salah satu metode satu langkah paling sederhana. Dibandingkan dengan
+								beberapa metode lain, metode ini paling tidak teliti. Namun, metode ini perlu dipelajari
+								mengingat kesederhanaan dan pemahaman yang mudah sehingga membuatnya lebih mudah untuk
+								mempelajari metode lain secara lebih menyeluruh.</p>
+							<p>Metode Euler merupakan metode paling sederhana yang diturunkan dari deret Taylor. Penyelesaian
+								initial value problems menggunakan metode Euler dilakukan melalui persamaan</p>
+							<p><em>yi + 1 = yi + f(xi,yi) h</em></p>
+							<p>dimana i merupakan tahap iterasi.</p>
+							<p><br /></p>
+							<h3 id="algoritma-metode-euler">Algoritma Metode Euler</h3>
+							<ol>
+								<li>Tentukan titik awal integrasi x0 dan y0</li>
+								<li>Tentukan jumlah iterasi n dan step size h yang digunakan.</li>
+								<li>Lakukan integrasi menggunakan persamaan diatas.</li>
+							</ol>
+							<p><br /></p>
+							<h3 id="contoh-soal">Contoh Soal</h3>
+							<p>Membuat program untuk menyelesaikan persamaan differensial berikut menggunakan Metode Euler</p>
+							<p>dy/dx = 1 + x^2, y(1) = -4</p>
+							<p>Untuk menentukan y(1.01), y(1.02) dan y(1.03)</p>
+							<p><br /></p>
+							<h6 id="listing-program">Listing Program</h6>
+							<pre><p class="copy copy1">Copied</p><i class="far fa-clone" onclick="copyCode1(code1)"></i><code id="code1" class="python">print(&quot;f(x,y) = 1+x^2&quot;)
 print(&quot;(yi+1) = y1 + h f(xi+yi)&quot;)
 
 xi = float(input(&quot;Masukkan xi = &quot;))
@@ -164,8 +181,8 @@ def metode_euler(xi,yi,h,n):
 metode_euler(xi,yi,h,n)
 </code></pre>
 
-<h6 id="hasil-running">Hasil Running</h6>
-<pre><code class="python">f(x,y) = 1+x^2
+							<h6 id="hasil-running">Hasil Running</h6>
+							<pre><code class="python">f(x,y) = 1+x^2
 (yi+1) = y1 + h f(xi+yi)
 Masukkan xi = 1
 Masukkan yi = -4
@@ -174,59 +191,66 @@ Nilai dari x1 =  1.01 dan y1 =  -3.98
 Nilai dari x2 =  1.02 dan y2 =  -3.959799
 Nilai dari x3 =  1.03 dan y3 =  -3.9393949999999998
 </code></pre>
-              
-            </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../carlo/" class="btn btn-neutral float-right" title="Monte Carlo Method">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../richardson/" class="btn btn-neutral" title="Richardson Extrapolation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
-  
 
-  <hr/>
+						</div>
+					</div>
+					<footer>
 
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-      <p>&copy; 2020 All Rights Reserved by Sulton Muhajir</p>
-    
-  </div>
+						<div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-      
-        </div>
-      </div>
+							<a href="../carlo/" class="btn btn-neutral float-right" title="Monte Carlo Method">Next <span
+									class="icon icon-circle-arrow-right"></span></a>
 
-    </section>
 
-  </div>
+							<a href="../richardson/" class="btn btn-neutral" title="Richardson Extrapolation"><span
+									class="icon icon-circle-arrow-left"></span> Previous</a>
 
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../richardson/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../carlo/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
+						</div>
+
+
+						<hr />
+
+						<div role="contentinfo">
+							<!-- Copyright etc -->
+
+							<p>&copy; 2020 All Rights Reserved by Sulton Muhajir</p>
+
+						</div>
+
+						Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a
+							href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a
+							href="https://readthedocs.org">Read the Docs</a>.
+					</footer>
+
+				</div>
+			</div>
+
+		</section>
+
+	</div>
+
+	<div class="rst-versions" role="note" aria-label="versions">
+		<span class="rst-current-version" data-toggle="rst-current-version">
+
+
+			<span><a href="../richardson/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+
+
+			<span style="margin-left: 15px"><a href="../carlo/" style="color: #fcfcfc">Next &raquo;</a></span>
+
+		</span>
+	</div>
+	<script>
+		var base_url = '..';
+	</script>
+	<script src="../js/theme.js" defer></script>
+	<script src="../search/main.js" defer></script>
+	<script defer>
+		window.onload = function () {
+			SphinxRtdTheme.Navigation.enable(true);
+		};
+	</script>
 
 </body>
+
 </html>

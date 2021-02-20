@@ -1,180 +1,211 @@
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Gauss Elimination - Komputasi Numerik</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Gauss Elimination";
-    var mkdocs_page_input_path = "gaus.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+	<link rel="shortcut icon" href="../img/favicon.ico">
+	<title>Gauss Elimination - Komputasi Numerik</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link rel="stylesheet" href="../css/theme.css" />
+	<link rel="stylesheet" href="../css/theme_extra.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+
+	<script>
+		// Current page data
+		var mkdocs_page_name = "Gauss Elimination";
+		var mkdocs_page_input_path = "gaus.md";
+		var mkdocs_page_url = null;
+	</script>
+
+	<script src="../js/jquery-2.1.1.min.js" defer></script>
+	<script src="../js/modernizr-2.8.3.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
-  <div class="wy-grid-for-nav">
+	<div class="wy-grid-for-nav">
 
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Komputasi Numerik</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../error/">Error in Numerical Computation</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../root/">Numerical Solution</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Gauss Elimination</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-eliminasi-gauss-jordan">1. Eliminasi Gauss Jordan</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#algoritma">Algoritma :</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#contoh-program">Contoh Program</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#hasil-running">Hasil Running</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-eliminasi-gauss-jacobi">2. Eliminasi Gauss Jacobi</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#contoh-program_1">Contoh Program</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#hasil-running_1">Hasil Running</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-eliminasi-gauss-seindel">3. Eliminasi Gauss Seindel</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#contoh-program_2">Contoh Program</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#hasil-running_2">Hasil Running</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../romberg/">Romberg Method</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../richardson/">Richardson Extrapolation</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../euler/">Euler Method</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../carlo/">Monte Carlo Method</a>
-                    </li>
-                </ul>
-      </div>
-    </div>
-    </nav>
+		<nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+			<div class="wy-side-scroll">
+				<div class="wy-side-nav-search">
+					<a href=".." class="icon icon-home"> Komputasi Numerik</a>
+					<div role="search">
+						<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+							<input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+						</form>
+					</div>
+				</div>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+				<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../error/">Error in Numerical
+								Computation</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../root/">Numerical Solution</a>
+						</li>
+					</ul>
+					<ul class="current">
+						<li class="toctree-l1 current"><a class="reference internal current" href="./">Gauss Elimination</a>
+							<ul class="current">
+								<li class="toctree-l2"><a class="reference internal" href="#1-eliminasi-gauss-jordan">1.
+										Eliminasi Gauss Jordan</a>
+									<ul>
+										<li class="toctree-l3"><a class="reference internal" href="#algoritma">Algoritma :</a>
+										</li>
+										<li class="toctree-l3"><a class="reference internal" href="#contoh-program">Contoh
+												Program</a>
+										</li>
+										<li class="toctree-l3"><a class="reference internal" href="#hasil-running">Hasil
+												Running</a>
+										</li>
+									</ul>
+								</li>
+								<li class="toctree-l2"><a class="reference internal" href="#2-eliminasi-gauss-jacobi">2.
+										Eliminasi Gauss Jacobi</a>
+									<ul>
+										<li class="toctree-l3"><a class="reference internal" href="#contoh-program_1">Contoh
+												Program</a>
+										</li>
+										<li class="toctree-l3"><a class="reference internal" href="#hasil-running_1">Hasil
+												Running</a>
+										</li>
+									</ul>
+								</li>
+								<li class="toctree-l2"><a class="reference internal" href="#3-eliminasi-gauss-seindel">3.
+										Eliminasi Gauss Seindel</a>
+									<ul>
+										<li class="toctree-l3"><a class="reference internal" href="#contoh-program_2">Contoh
+												Program</a>
+										</li>
+										<li class="toctree-l3"><a class="reference internal" href="#hasil-running_2">Hasil
+												Running</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../romberg/">Romberg Method</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../richardson/">Richardson
+								Extrapolation</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../euler/">Euler Method</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="toctree-l1"><a class="reference internal" href="../carlo/">Monte Carlo Method</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Komputasi Numerik</a>
-      </nav>
+		<section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>Gauss Elimination</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="metode-eliminasi-gauss">Metode Eliminasi Gauss</h1>
-<p>Eliminasi Gauss ialah sebuah cara mengoperasikan nilai-nilai yang berada di dalam matriks sehingga dapat menjadi matriks yang lebih sederhana. Caranya ialah melakukan operasi baris sehingga matriks tersebut menjadi matriks yang eselon-baris. Ini dapat digunakan sebagai salah satu metode penyelesaian persamaan linear dengan menggunakan matriks Caranya dengan mengubah persamaan linear tersebut ke dalam matriks teraugmentasi dan mengoperasikannya. Setelah menjadi matriks Eselon-baris, lakukan substitusi balik untuk mendapatkan nilai dari variabel-variabel tersebut.</p>
-<p>Mencari solusi persamaan linear dengan membuat matrix triangular atas terdiri dari dua tahap :</p>
-<ol>
-<li>Forward Elimination (eliminasi maju) - Tujuan Forward Elimination adalah untuk membentuk matriks koefisien menjadi Upper Triangular Matrix.</li>
-<li>Backward substitution (substitusi mundur) - Proses penyelesaian sistem persamaan linear yang telah diubah menjadi bentuk eselon baris atau bentuk eselon baris tereduksi. Persamaan terakhir diselesaikan pertama, lalu selanjutnya ke terakhir.</li>
-</ol>
-<p><br/></p>
-<h3 id="1-eliminasi-gauss-jordan">1. Eliminasi Gauss Jordan</h3>
-<p>Metode Eliminasi Gauss Jordan merupakan pengembangan metode eliminasi gauss, hanya saja augmented matrik , pada sebelah kiri dirubah menjadi matrik diagonal.</p>
-<h6 id="algoritma">Algoritma :</h6>
-<ol>
-<li>
-<p>masukkan matrik A, dan vektor B beserta ukurannya n</p>
-</li>
-<li>
-<p>buat augmented matrik [A|B] namakan dengan A</p>
-</li>
-<li>
-<p>Untuk baris ke i dimana i=1 s/d n</p>
-</li>
-</ol>
-<blockquote>
-<p>a. perhatikan nilai a(i,i) sama dengan 0</p>
-<ul>
-<li>jika iya maka baris ke i dan baris i+k&lt;=n, dimana a(i+k,i) tidak sama dengan nol, bila tidak ada berarti perhitungan tidak bisa dilanjutkan dan proses dihentikan dengan tanpa penyelesaian.</li>
-<li>jika tidak maka dilanjutkan</li>
-</ul>
-<p>b. Jadikan nilai diagonalnya menjadi satu,dengan cara untuk setiap kolam k dimana k=1 s/d n+1, hitung $$ a(i,k) = a(i,k) / a(i,j) $$.</p>
-</blockquote>
-<h6 id="contoh-program">Contoh Program</h6>
-<blockquote>
-<p>Persamaan:</p>
-<p>[ [2 5 3 = 1], [3 4 2 = -3], [1 3 1 = 2] ]</p>
-</blockquote>
-<pre><code class="python">import numpy as np
+
+			<nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+				<i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+				<a href="..">Komputasi Numerik</a>
+			</nav>
+
+
+			<div class="wy-nav-content">
+				<div class="rst-content">
+					<div role="navigation" aria-label="breadcrumbs navigation">
+						<ul class="wy-breadcrumbs">
+							<li><a href="..">Docs</a> &raquo;</li>
+
+
+
+							<li>Gauss Elimination</li>
+							<li class="wy-breadcrumbs-aside">
+
+							</li>
+						</ul>
+
+						<hr />
+					</div>
+					<div role="main">
+						<div class="section">
+
+							<h1 id="metode-eliminasi-gauss">Metode Eliminasi Gauss</h1>
+							<p>Eliminasi Gauss ialah sebuah cara mengoperasikan nilai-nilai yang berada di dalam matriks
+								sehingga dapat menjadi matriks yang lebih sederhana. Caranya ialah melakukan operasi baris
+								sehingga matriks tersebut menjadi matriks yang eselon-baris. Ini dapat digunakan sebagai salah
+								satu metode penyelesaian persamaan linear dengan menggunakan matriks Caranya dengan mengubah
+								persamaan linear tersebut ke dalam matriks teraugmentasi dan mengoperasikannya. Setelah menjadi
+								matriks Eselon-baris, lakukan substitusi balik untuk mendapatkan nilai dari variabel-variabel
+								tersebut.</p>
+							<p>Mencari solusi persamaan linear dengan membuat matrix triangular atas terdiri dari dua tahap :
+							</p>
+							<ol>
+								<li>Forward Elimination (eliminasi maju) - Tujuan Forward Elimination adalah untuk membentuk
+									matriks koefisien menjadi Upper Triangular Matrix.</li>
+								<li>Backward substitution (substitusi mundur) - Proses penyelesaian sistem persamaan linear yang
+									telah diubah menjadi bentuk eselon baris atau bentuk eselon baris tereduksi. Persamaan
+									terakhir diselesaikan pertama, lalu selanjutnya ke terakhir.</li>
+							</ol>
+							<p><br /></p>
+							<h3 id="1-eliminasi-gauss-jordan">1. Eliminasi Gauss Jordan</h3>
+							<p>Metode Eliminasi Gauss Jordan merupakan pengembangan metode eliminasi gauss, hanya saja
+								augmented matrik , pada sebelah kiri dirubah menjadi matrik diagonal.</p>
+							<h6 id="algoritma">Algoritma :</h6>
+							<ol>
+								<li>
+									<p>masukkan matrik A, dan vektor B beserta ukurannya n</p>
+								</li>
+								<li>
+									<p>buat augmented matrik [A|B] namakan dengan A</p>
+								</li>
+								<li>
+									<p>Untuk baris ke i dimana i=1 s/d n</p>
+								</li>
+							</ol>
+							<blockquote>
+								<p>a. perhatikan nilai a(i,i) sama dengan 0</p>
+								<ul>
+									<li>jika iya maka baris ke i dan baris i+k&lt;=n, dimana a(i+k,i) tidak sama dengan nol, bila
+										tidak ada berarti perhitungan tidak bisa dilanjutkan dan proses dihentikan dengan tanpa
+										penyelesaian.</li>
+									<li>jika tidak maka dilanjutkan</li>
+								</ul>
+								<p>b. Jadikan nilai diagonalnya menjadi satu,dengan cara untuk setiap kolam k dimana k=1 s/d
+									n+1, hitung $$ a(i,k) = a(i,k) / a(i,j) $$.</p>
+							</blockquote>
+							<h6 id="contoh-program">Contoh Program</h6>
+							<blockquote>
+								<p>Persamaan:</p>
+								<p>[ [2 5 3 = 1], [3 4 2 = -3], [1 3 1 = 2] ]</p>
+							</blockquote>
+							<pre><p class="copy copy1">Copied</p><i class="far fa-clone" onclick="copyCode1(code1)"></i><code id="code1" class="python">import numpy as np
 
 #Definisi Matrix
 m=int(input(&quot;Masukkan Panjang Matrix: &quot;))
@@ -216,8 +247,8 @@ for m in range(n-1,-1,-1):
 
 </code></pre>
 
-<h6 id="hasil-running">Hasil Running</h6>
-<pre><code class="python">Masukkan Panjang Matrix: 3
+							<h6 id="hasil-running">Hasil Running</h6>
+							<pre><code class="python">Masukkan Panjang Matrix: 3
 Masukkan a1,1: 2
 Masukkan a1,2: 5
 Masukkan a1,3: 3
@@ -243,31 +274,36 @@ Nilai x 2 = 2.0
 Nilai x 1 = -2.9999999999999996
 </code></pre>
 
-<blockquote>
-<p>Diperoleh Hasil</p>
-<ul>
-<li>
-<p>x = -3</p>
-</li>
-<li>
-<p>y = 2</p>
-</li>
-<li>
-<p>z = -1</p>
-</li>
-</ul>
-</blockquote>
-<p><br/></p>
-<h3 id="2-eliminasi-gauss-jacobi">2. Eliminasi Gauss Jacobi</h3>
-<p>Metode Jacobi, adalah metode tak langsung atau metode iteratif yang melakukan perbaharuan nilai x yang diperoleh tiap iterasi (mirip metode substitusi berurutan). Metode ini hampir sama dengan metode Gauss Seidel, namun tidak melibatkan perhitungan implisit. </p>
-<p>Metode ini merupakan suatu teknik penyelesaian SPL berukuran n x n, AX = b, secara iteratif. Proses penyelesaian dimulai dengan suatu hampiran awal terhadap penyelesaian, X0, kemudian membentuk suatu serangkaian vector X1, X2, … yang konvergen ke X.</p>
-<p>Metode Iterasi Jacobi ini digunakan untuk menyelesaikan persamaan Linier berukuran besar dan proporsi koefisien nolnya besar.</p>
-<h6 id="contoh-program_1">Contoh Program</h6>
-<blockquote>
-<p>Persamaan</p>
-<p>[ [3 1 -1 = 5], [4 7 -3 = 20], [2 -2 5 =10] ]</p>
-</blockquote>
-<pre><code class="python">from pprint import pprint
+							<blockquote>
+								<p>Diperoleh Hasil</p>
+								<ul>
+									<li>
+										<p>x = -3</p>
+									</li>
+									<li>
+										<p>y = 2</p>
+									</li>
+									<li>
+										<p>z = -1</p>
+									</li>
+								</ul>
+							</blockquote>
+							<p><br /></p>
+							<h3 id="2-eliminasi-gauss-jacobi">2. Eliminasi Gauss Jacobi</h3>
+							<p>Metode Jacobi, adalah metode tak langsung atau metode iteratif yang melakukan perbaharuan nilai
+								x yang diperoleh tiap iterasi (mirip metode substitusi berurutan). Metode ini hampir sama dengan
+								metode Gauss Seidel, namun tidak melibatkan perhitungan implisit. </p>
+							<p>Metode ini merupakan suatu teknik penyelesaian SPL berukuran n x n, AX = b, secara iteratif.
+								Proses penyelesaian dimulai dengan suatu hampiran awal terhadap penyelesaian, X0, kemudian
+								membentuk suatu serangkaian vector X1, X2, … yang konvergen ke X.</p>
+							<p>Metode Iterasi Jacobi ini digunakan untuk menyelesaikan persamaan Linier berukuran besar dan
+								proporsi koefisien nolnya besar.</p>
+							<h6 id="contoh-program_1">Contoh Program</h6>
+							<blockquote>
+								<p>Persamaan</p>
+								<p>[ [3 1 -1 = 5], [4 7 -3 = 20], [2 -2 5 =10] ]</p>
+							</blockquote>
+							<pre><p class="copy copy2">Copied</p><i class="far fa-clone" onclick="copyCode2(code2)"></i><code id="code2" class="python">from pprint import pprint
 from numpy import array, zeros, diag, diagflat, dot
 import numpy as np
 
@@ -316,8 +352,8 @@ pprint(sol)
 
 </code></pre>
 
-<h6 id="hasil-running_1">Hasil Running</h6>
-<pre><code class="python">Masukkan Panjang Matrix: 3
+							<h6 id="hasil-running_1">Hasil Running</h6>
+							<pre><code class="python">Masukkan Panjang Matrix: 3
 Masukkan a1,1: 3
 Masukkan a1,2: 1
 Masukkan a1,3: -1
@@ -343,17 +379,25 @@ x:
 array([1.50602413, 3.13253016, 2.6506024 ])
 </code></pre>
 
-<p><br/></p>
-<h3 id="3-eliminasi-gauss-seindel">3. Eliminasi Gauss Seindel</h3>
-<p>Metode iterasi Gauss-Seidel adalah metode yang menggunakan proses iterasi hingga diperoleh nilai-nilai yang berubah-ubah dan akhirnya relatif konstan. Metode iterasi Gauss-Seidel dikembangkan dari gagasan metode iterasi pada solusi persamaan tak linier. Gauss ini mempunyai kelebihan dan kekurangan.</p>
-<p>Kelebihannya yaitu Metode eliminasi gauss-seidel digunakan untuk menyelesaikan SPL yang berukuran kecil karena metode ini lebih efisien. Dengan metode iterasi Gauss-Seidel toleransi pembulatan dapat diperkecil karena iterasi dapat diteruskan sampai seteliti mungkin sesuai dengan batas toleransi yang diinginkan.</p>
-<p>Kekurangannya atau Kelemahan dari metode ini adalah masalah pivot (titik tengah) yang harus benar–benar diperhatikan, karena penyusunan yang salah akan menyebabkan iterasi menjadi divergen dan tidak diperoleh hasil yang benar.</p>
-<h6 id="contoh-program_2">Contoh Program</h6>
-<blockquote>
-<p>Persamaan</p>
-<p>[ [4 -1 1 = 7], [4 -8 1 = -21], [-2 1 5 = 15] ]</p>
-</blockquote>
-<pre><code class="python">from pprint import pprint
+							<p><br /></p>
+							<h3 id="3-eliminasi-gauss-seindel">3. Eliminasi Gauss Seindel</h3>
+							<p>Metode iterasi Gauss-Seidel adalah metode yang menggunakan proses iterasi hingga diperoleh
+								nilai-nilai yang berubah-ubah dan akhirnya relatif konstan. Metode iterasi Gauss-Seidel
+								dikembangkan dari gagasan metode iterasi pada solusi persamaan tak linier. Gauss ini mempunyai
+								kelebihan dan kekurangan.</p>
+							<p>Kelebihannya yaitu Metode eliminasi gauss-seidel digunakan untuk menyelesaikan SPL yang
+								berukuran kecil karena metode ini lebih efisien. Dengan metode iterasi Gauss-Seidel toleransi
+								pembulatan dapat diperkecil karena iterasi dapat diteruskan sampai seteliti mungkin sesuai
+								dengan batas toleransi yang diinginkan.</p>
+							<p>Kekurangannya atau Kelemahan dari metode ini adalah masalah pivot (titik tengah) yang harus
+								benar–benar diperhatikan, karena penyusunan yang salah akan menyebabkan iterasi menjadi divergen
+								dan tidak diperoleh hasil yang benar.</p>
+							<h6 id="contoh-program_2">Contoh Program</h6>
+							<blockquote>
+								<p>Persamaan</p>
+								<p>[ [4 -1 1 = 7], [4 -8 1 = -21], [-2 1 5 = 15] ]</p>
+							</blockquote>
+							<pre><p class="copy copy3">Copied</p><i class="far fa-clone" onclick="copyCode3(code3)"></i><code id="code3" class="python">from pprint import pprint
 import numpy as np
 
 def seidel(a, x ,b): 
@@ -400,8 +444,8 @@ print(&quot;Jawaban :&quot;,x)
 
 </code></pre>
 
-<h6 id="hasil-running_2">Hasil Running</h6>
-<pre><code class="python">Masukkan Panjang Matrix: 3
+							<h6 id="hasil-running_2">Hasil Running</h6>
+							<pre><code class="python">Masukkan Panjang Matrix: 3
 Masukkan a1,1: 4
 Masukkan a1,2: -1
 Masukkan a1,3: 1
@@ -427,73 +471,80 @@ array([  7., -21.,  15.])
 Jawaban : [2.0, 4.0, 3.0]
 </code></pre>
 
-<blockquote>
-<p>Iterasi yang digunakan sebanyak 100 iterasi, sehingga dapat menghasilkan:</p>
-<ul>
-<li>
-<p>x = 2</p>
-</li>
-<li>
-<p>y = 4</p>
-</li>
-<li>
-<p>z = 3</p>
-</li>
-</ul>
-</blockquote>
-              
-            </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../romberg/" class="btn btn-neutral float-right" title="Romberg Method">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../root/" class="btn btn-neutral" title="Numerical Solution"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
-  
+							<blockquote>
+								<p>Iterasi yang digunakan sebanyak 100 iterasi, sehingga dapat menghasilkan:</p>
+								<ul>
+									<li>
+										<p>x = 2</p>
+									</li>
+									<li>
+										<p>y = 4</p>
+									</li>
+									<li>
+										<p>z = 3</p>
+									</li>
+								</ul>
+							</blockquote>
 
-  <hr/>
+						</div>
+					</div>
+					<footer>
 
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-      <p>&copy; 2020 All Rights Reserved by Sulton Muhajir</p>
-    
-  </div>
+						<div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-      
-        </div>
-      </div>
+							<a href="../romberg/" class="btn btn-neutral float-right" title="Romberg Method">Next <span
+									class="icon icon-circle-arrow-right"></span></a>
 
-    </section>
 
-  </div>
+							<a href="../root/" class="btn btn-neutral" title="Numerical Solution"><span
+									class="icon icon-circle-arrow-left"></span> Previous</a>
 
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../root/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../romberg/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
+						</div>
+
+
+						<hr />
+
+						<div role="contentinfo">
+							<!-- Copyright etc -->
+
+							<p>&copy; 2020 All Rights Reserved by Sulton Muhajir</p>
+
+						</div>
+
+						Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a
+							href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a
+							href="https://readthedocs.org">Read the Docs</a>.
+					</footer>
+
+				</div>
+			</div>
+
+		</section>
+
+	</div>
+
+	<div class="rst-versions" role="note" aria-label="versions">
+		<span class="rst-current-version" data-toggle="rst-current-version">
+
+
+			<span><a href="../root/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+
+
+			<span style="margin-left: 15px"><a href="../romberg/" style="color: #fcfcfc">Next &raquo;</a></span>
+
+		</span>
+	</div>
+	<script>
+		var base_url = '..';
+	</script>
+	<script src="../js/theme.js" defer></script>
+	<script src="../search/main.js" defer></script>
+	<script defer>
+		window.onload = function () {
+			SphinxRtdTheme.Navigation.enable(true);
+		};
+	</script>
 
 </body>
+
 </html>
